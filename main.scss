@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+// 1. Base (共通項・リセット・Mixin)
+@use "scss/base/reset";
+@use "scss/base/base";
+@use "scss/mixin";     
+
+// 2. Component (ヘッダー・フッター)
+@use "scss/component/header";
+@use "scss/component/footer";
+
+// 3. Pages (各ページ固有)
+@use "scss/pages/top";
+@use "scss/pages/about";
+@use "scss/pages/projects";
+@use "scss/pages/sponsor";
+@use "scss/pages/blog";
+@use "scss/pages/blog-detail";
+@use "scss/pages/contact";

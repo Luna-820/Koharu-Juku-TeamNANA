@@ -1,0 +1,7 @@
+$sp: 430px;
+
+@mixin pc {
+    @media (min-width: ($sp + 1px)) {
+        @content;
+    }
+}
