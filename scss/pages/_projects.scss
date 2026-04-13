@@ -1,2 +1,416 @@
-@use '../mixin' as mx;   
-@use '../base/base' as *;
+@use "../mixin" as mx;
+@use "../base/base" as *;
+
+#service {
+  .fv {
+    position: relative;
+    background: url(../img/fv-img.png);
+    background-position: center;
+    background-size: cover;
+    padding: 100px 15px;
+    margin-bottom: 60px;
+
+    .section-title {
+      color: $color-white;
+      
+      span {
+        color: $color-white;
+      }
+    }
+
+    .fv-bg {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    .hanabira {
+      position: absolute;
+    }
+    
+    .hanabira-1 {
+      width: 80px;
+      height: 80px;
+      left: 50px;
+      bottom: 10px;
+      z-index: 4;
+    }
+    
+    .hanabira-2 {
+      width: 57px;
+      height: 57px;
+      left: 80px;
+      bottom: 5px;
+      transform: rotate(15deg);
+      z-index: 3;
+    }
+
+    .hanabira-3 {
+      width: 66px;
+      height: 66px;
+      right: 30px;
+      bottom: 30px;
+      transform: rotate(150deg);
+      z-index: 2;
+    }
+  }
+
+  .reason {
+    position: relative;
+    margin-bottom: 30px;
+
+    &__title {
+      font-size: 2.7rem;
+    }
+
+    &__list {
+      width: 100%;
+      height: 250px;
+      position: relative;
+
+      .item {
+        width: 170px;
+        position: absolute;
+
+        &:nth-child(1) {
+          top: 0;
+          left: 0;
+          z-index: 3;
+        }
+
+        &:nth-child(2) {
+          top: 30px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 2;
+        }
+
+        &:nth-child(3) {
+          top: 10px;
+          right: 0;
+          z-index: 1;
+        }
+      }
+    }
+
+    .white-bg {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -30px;
+    }
+  }
+
+  .detail {
+    text-align: left;
+    background-color: $color-cream;
+    padding: 64px 0px;
+
+    &__text {
+      font-weight: $fw-light;
+      margin-bottom: 16px;
+    }
+
+    &__img {
+      margin-bottom: 70px;
+    }
+
+    &__content {
+      margin-bottom: 70px;
+
+      .text {
+        font-weight: $fw-light;
+      }
+    }
+
+    .title-h3 {
+      position: relative;
+      font-size: 2.4rem;
+      font-family: $font-family-section-title;
+      font-weight: $fw-base;
+      padding-left: 16px;
+      margin-bottom: 16px;
+
+      &::after {
+        height: 100%;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-left: 3px solid $color-deep-pink;
+      }
+    }
+
+    &__card-area {
+      margin-bottom: 70px;
+
+      .cards {
+        padding-inline: 15px;
+
+        .card {
+          background-color: $color-white;
+          border-radius: 10px;
+          border-top: 1px solid $color-deep-pink;
+          padding: 10px 20px;
+          margin-bottom: 24px;
+
+          &__header {
+            color: $color-deep-pink;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+
+            .num {
+              font-size: 2.5rem;
+              font-family: "Hina Mincho", serif;
+            }
+          }
+
+          &__body {
+            font-weight: $fw-light;
+
+            .title {
+              font-size: $fs-h3;
+              font-weight: $fw-base;
+              font-family: "Hina Mincho", serif;
+              margin-bottom: 10px;
+            }
+
+            .lead {
+              font-weight: $fw-light;
+              margin-bottom: 15px;
+            }
+
+            .list {
+              list-style: disc;
+              list-style-position: inside;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .cta {
+      position: relative;
+      text-align: center;
+      background: $color-cream;
+      padding-bottom: 39px;
+  
+      &__title {
+        font-size: 2.2rem;
+        color: $color-deep-pink;
+        font-family: "Hina Mincho", serif;
+        margin-bottom: 10px;
+      }
+  
+      &__text {
+        font-weight: $fw-light;
+        margin-bottom: 30px;
+      }
+  
+      &__img {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -64px;
+      }
+    }
+  }
+
+  #sakura {
+    .card-section-sakura {
+      height: 450vh;
+      position: relative;
+
+      .box {
+        height: 80vh;
+        position: sticky;
+        top: 60px;
+
+        .cards {
+          height: 100%;
+          position: relative;
+
+          .card {
+            width: 93%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            opacity: 0;
+            transform: translateX(-50%) translateY(40px);
+            transition: .7s ease;
+            margin: 0 auto;
+
+            &.active {
+              opacity: 1;
+              // transform: translateY(0);
+              transform: translateX(-50%) translateY(0);
+            }
+          }
+        }
+
+        .card-nav {
+          position: absolute;
+          right: -10px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          z-index: 10;
+
+          &__dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $color-deep-pink;
+            opacity: 0.3;
+            transition: all 0.3s ease;
+
+            &.active {
+              opacity: 1;
+              width: 20px;
+              height: 20px;
+              border-radius: 0;
+              background: url("../img/card-point.png") center / contain no-repeat;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  #movie {
+    position: relative;
+    background-color: $color-white;
+    
+    .card {
+      background-color: rgba(250, 232, 228, .3);
+    }
+    
+    .white-bg {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  
+  #esports {
+    position: relative;
+
+    .card-section-esports {
+      height: 250vh;
+      position: relative;
+  
+      .box {
+        height: 70vh;
+        position: sticky;
+        top: 60px;
+  
+        .cards {
+          height: 100%;
+          position: relative;
+  
+          .card {
+            width: 93%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            opacity: 0;
+            transform: translateX(-50%) translateY(40px);
+            transition: .7s ease;
+            margin: 0 auto;
+  
+            &.active {
+              opacity: 1;
+              transform: translateX(-50%) translateY(0);
+            }
+          }
+        }
+  
+        .card-nav {
+          position: absolute;
+          right: -10px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          z-index: 10;
+  
+          &__dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $color-deep-pink;
+            opacity: 0.3;
+            transition: all 0.3s ease;
+  
+            &.active {
+              opacity: 1;
+              width: 20px;
+              height: 20px;
+              border-radius: 0;
+              background: url("../img/card-point.png") center / contain no-repeat;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    .white-bg {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -35px;
+      transform: rotate(180deg);
+    }
+  }
+
+  .contact {
+    color: $color-white;
+    text-align: left;
+    background-color: $color-white;
+    padding-block: 64px;
+
+    .wrapper {
+      .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        background: url(../img/contact-bg.png);
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+        padding: 30px;
+        
+        .left {
+          .contact-title {
+            font-size: 2.8rem;
+            font-weight: $fw-base;
+            margin-bottom: 8px;
+          }
+
+          .contact-text {
+            font-size: $fs-small;
+            font-weight: $fw-base;
+          }
+        }
+
+        .right {
+          .arrow {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}
