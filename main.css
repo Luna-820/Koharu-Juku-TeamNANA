@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -104,8 +105,7 @@ a:hover {
 img {
   width: 100%;
   vertical-align: bottom;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .body {
@@ -273,6 +273,214 @@ img {
     top: 100vh;
   }
 }
+#about .fv {
+  position: relative;
+  background: url(../img/fv-img.png);
+  background-position: center;
+  background-size: cover;
+  padding: 100px 15px;
+}
+#about .fv .section-title {
+  color: #FFFFFF;
+}
+#about .fv .section-title span {
+  color: #FFFFFF;
+}
+#about .fv .fv-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+#about .fv .hanabira {
+  position: absolute;
+}
+#about .fv .hanabira-1 {
+  width: 80px;
+  height: 80px;
+  left: 50px;
+  bottom: 10px;
+  z-index: 4;
+}
+#about .fv .hanabira-2 {
+  width: 57px;
+  height: 57px;
+  left: 80px;
+  bottom: 5px;
+  transform: rotate(15deg);
+  z-index: 3;
+}
+#about .fv .hanabira-3 {
+  width: 66px;
+  height: 66px;
+  right: 30px;
+  bottom: 30px;
+  transform: rotate(150deg);
+  z-index: 2;
+}
+#about .intro-text {
+  font-size: 1.6rem;
+}
+#about .intro-text .text {
+  padding-bottom: 40px;
+}
+#about .card-area {
+  padding-bottom: 20px;
+}
+#about .card-area .cards .card {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  border-top: 1px solid #CE7E8B;
+  padding: 10px 16px;
+  margin-bottom: 24px;
+}
+#about .card-area .cards .card__header {
+  color: #CE7E8B;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+#about .card-area .cards .card__header .num {
+  font-size: 2.5rem;
+  font-family: "Hina Mincho", serif;
+}
+#about .card-area .cards .card__body {
+  font-weight: 300;
+  text-align: left;
+}
+#about .card-area .cards .card__body .title {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Hina Mincho", serif;
+  margin-bottom: 10px;
+}
+#about .card-area .cards .card__body .lead {
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+#about .card-area .cards .card__body .list {
+  list-style: disc;
+  list-style-position: inside;
+  margin-bottom: 10px;
+}
+#about #mission {
+  background-color: #FEF7EE;
+  padding-block: 64px 20px;
+}
+#about #mission .box-title__main {
+  font-size: 1.85rem;
+}
+#about #vision {
+  background: linear-gradient(to bottom, #FFFFFF 0%, #FAE8E4 90%, #FAE8E4 100%);
+  padding-top: 64px;
+}
+#about #vision .intro-text {
+  padding-bottom: 24px;
+}
+#about #vision .card-area h3 {
+  font-size: 2.4rem;
+  text-align: left;
+  padding-bottom: 24px;
+  margin-bottom: 0;
+}
+#about #vision .card-area .description {
+  text-align: left;
+  padding-bottom: 24px;
+}
+#about #value {
+  padding-block: 64px 20px;
+}
+#about #value .text {
+  font-size: 1.5rem;
+}
+#about #message {
+  padding-block: 64px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#about #message .intro-text {
+  max-width: 350px;
+}
+#about #company {
+  padding-block: 64px 40px;
+}
+#about #company .profile-list {
+  border-top: 1px solid #f6f6f6;
+}
+#about #company .profile-list .profile-item {
+  display: flex;
+  padding: 24px 0;
+  border-bottom: 1px solid #f6f6f6;
+  align-items: flex-start;
+}
+#about #company .profile-list .profile-item dt {
+  width: 30%;
+  color: #CE7E8B;
+  text-align: left;
+  flex-shrink: 0;
+}
+#about #company .profile-list .profile-item dd {
+  flex-grow: 1;
+  color: #2B2B2B;
+  line-height: 1.6;
+  text-align: left;
+  margin: 0;
+}
+#about #company .profile-list .profile-item dd a {
+  text-decoration: none;
+  color: inherit;
+}
+#about #company .profile-list .profile-item dd a:hover {
+  text-decoration: underline;
+}
+#about #company .profile-list .profile-item dd ul {
+  list-style: none;
+  padding: 0;
+}
+#about #company .profile-list .profile-item dd ul li {
+  position: relative;
+  padding-left: 1.2em;
+  padding-right: 1rem;
+  margin-bottom: 0.5em;
+}
+#about #company .profile-list .profile-item dd ul li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+}
+#about .contact {
+  color: #FFFFFF;
+  text-align: left;
+  background-color: #FFFFFF;
+  padding-block: 64px;
+}
+#about .contact .wrapper .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: url(../img/contact-bg.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  padding: 30px;
+}
+#about .contact .wrapper .flex .left .contact-title {
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+#about .contact .wrapper .flex .left .contact-text {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+#about .contact .wrapper .flex .right .arrow {
+  width: 50px;
+  height: 50px;
+}
+
 #service .fv {
   position: relative;
   background: url(../img/fv-img.png);

@@ -1,2 +1,269 @@
-@use '../mixin' as mx;   
+@use '../mixin' as mx;
 @use '../base/base' as *;
+
+#about {
+    .fv {
+        position: relative;
+        background: url(../img/fv-img.png);
+        background-position: center;
+        background-size: cover;
+        padding: 100px 15px;
+
+        .section-title {
+            color: $color-white;
+
+            span {
+                color: $color-white;
+            }
+        }
+
+        .fv-bg {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .hanabira {
+            position: absolute;
+        }
+
+        .hanabira-1 {
+            width: 80px;
+            height: 80px;
+            left: 50px;
+            bottom: 10px;
+            z-index: 4;
+        }
+
+        .hanabira-2 {
+            width: 57px;
+            height: 57px;
+            left: 80px;
+            bottom: 5px;
+            transform: rotate(15deg);
+            z-index: 3;
+        }
+
+        .hanabira-3 {
+            width: 66px;
+            height: 66px;
+            right: 30px;
+            bottom: 30px;
+            transform: rotate(150deg);
+            z-index: 2;
+        }
+    }
+
+    .intro-text {
+        font-size: 1.6rem;
+
+        .text {
+            padding-bottom: 40px;
+        }
+    }
+
+    .card-area {
+        padding-bottom: 20px;
+
+        .cards {
+
+            .card {
+                background-color: $color-white;
+                border-radius: 10px;
+                border-top: 1px solid $color-deep-pink;
+                padding: 10px 16px;
+                margin-bottom: 24px;
+
+                &__header {
+                    color: $color-deep-pink;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 24px;
+
+                    .num {
+                        font-size: 2.5rem;
+                        font-family: "Hina Mincho", serif;
+                    }
+                }
+
+                &__body {
+                    font-weight: $fw-light;
+                    text-align: left;
+
+                    .title {
+                        font-size: $fs-h3;
+                        font-weight: $fw-base;
+                        font-family: "Hina Mincho", serif;
+                        margin-bottom: 10px;
+                    }
+
+                    .lead {
+                        font-weight: $fw-light;
+                        margin-bottom: 15px;
+                    }
+
+                    .list {
+                        list-style: disc;
+                        list-style-position: inside;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    #mission {
+        background-color: $color-cream;
+        padding-block: 64px 20px;
+
+        .box-title__main {
+            font-size: 1.85rem;
+        }
+    }
+
+    #vision {
+        background: linear-gradient(to bottom,
+                #FFFFFF 0%,
+                #FAE8E4 90%,
+                #FAE8E4 100%);
+
+        padding-top: 64px;
+
+        .intro-text {
+            padding-bottom: 24px;
+        }
+
+        .card-area {
+            h3 {
+                font-size: 2.4rem;
+                text-align: left;
+                padding-bottom: 24px;
+                margin-bottom: 0;
+            }
+
+            .description {
+                text-align: left;
+                padding-bottom: 24px;
+            }
+        }
+    }
+
+    #value {
+        padding-block: 64px 20px;
+
+        .text {
+            font-size: 1.5rem;
+        }
+    }
+
+    #message {
+        padding-block: 64px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .intro-text {
+            max-width: 350px;
+        }
+    }
+
+    #company {
+        padding-block: 64px 40px;
+
+        .profile-list {
+            border-top: 1px solid $color-grey;
+
+            .profile-item {
+                display: flex;
+                padding: 24px 0;
+                border-bottom: 1px solid $color-grey;
+                align-items: flex-start;
+
+                dt {
+                    width: 30%;
+                    color: $color-deep-pink;
+                    text-align: left;
+                    flex-shrink: 0;
+                }
+
+                dd {
+                    flex-grow: 1;
+                    color: $color-black;
+                    line-height: 1.6;
+                    text-align: left;
+                    margin: 0;
+
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    ul {
+                        list-style: none;
+                        padding: 0;
+
+                        li {
+                            position: relative;
+                            padding-left: 1.2em;
+                            padding-right: 1rem;
+                            margin-bottom: 0.5em;
+
+                            &::before {
+                                content: "・";
+                                position: absolute;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact {
+        color: $color-white;
+        text-align: left;
+        background-color: $color-white;
+        padding-block: 64px;
+
+        .wrapper {
+            .flex {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                background: url(../img/contact-bg.png);
+                background-position: center;
+                background-size: cover;
+                border-radius: 20px;
+                padding: 30px;
+
+                .left {
+                    .contact-title {
+                        font-size: 2.8rem;
+                        font-weight: $fw-base;
+                        margin-bottom: 8px;
+                    }
+
+                    .contact-text {
+                        font-size: $fs-small;
+                        font-weight: $fw-base;
+                    }
+                }
+
+                .right {
+                    .arrow {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
