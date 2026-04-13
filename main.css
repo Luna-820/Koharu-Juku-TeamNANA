@@ -110,12 +110,13 @@ img {
 
 .body {
   width: 430px;
-  height: 100vh;
+  height: 95vh;
   position: fixed;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   text-align: center;
+  border-radius: 20px;
   background-color: #FFFFFF;
   overflow: hidden;
   z-index: 1;
@@ -123,12 +124,17 @@ img {
 @media (max-width: 768px) {
   .body {
     width: 100%;
+    height: 100vh;
+    top: 0;
+    transform: translate(-50%, 0);
+    border-radius: 0;
   }
 }
 .body__inner {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
+  scroll-behavior: auto;
 }
 .body__inner::-webkit-scrollbar {
   display: none;
@@ -195,6 +201,7 @@ img {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  margin-bottom: 30px;
 }
 .box-title .hanabira {
   width: 62px;
@@ -265,4 +272,345 @@ img {
     opacity: 0;
     top: 100vh;
   }
+}
+#service .fv {
+  position: relative;
+  background: url(../img/fv-img.png);
+  background-position: center;
+  background-size: cover;
+  padding: 100px 15px;
+  margin-bottom: 60px;
+}
+#service .fv .section-title {
+  color: #FFFFFF;
+}
+#service .fv .section-title span {
+  color: #FFFFFF;
+}
+#service .fv .fv-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+#service .fv .hanabira {
+  position: absolute;
+}
+#service .fv .hanabira-1 {
+  width: 80px;
+  height: 80px;
+  left: 50px;
+  bottom: 10px;
+  z-index: 4;
+}
+#service .fv .hanabira-2 {
+  width: 57px;
+  height: 57px;
+  left: 80px;
+  bottom: 5px;
+  transform: rotate(15deg);
+  z-index: 3;
+}
+#service .fv .hanabira-3 {
+  width: 66px;
+  height: 66px;
+  right: 30px;
+  bottom: 30px;
+  transform: rotate(150deg);
+  z-index: 2;
+}
+#service .reason {
+  position: relative;
+  margin-bottom: 30px;
+}
+#service .reason__title {
+  font-size: 2.7rem;
+}
+#service .reason__list {
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+#service .reason__list .item {
+  width: 170px;
+  position: absolute;
+}
+#service .reason__list .item:nth-child(1) {
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+#service .reason__list .item:nth-child(2) {
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+#service .reason__list .item:nth-child(3) {
+  top: 10px;
+  right: 0;
+  z-index: 1;
+}
+#service .reason .white-bg {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+}
+#service .detail {
+  text-align: left;
+  background-color: #FEF7EE;
+  padding: 64px 0px;
+}
+#service .detail__text {
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+#service .detail__img {
+  margin-bottom: 70px;
+}
+#service .detail__content {
+  margin-bottom: 70px;
+}
+#service .detail__content .text {
+  font-weight: 300;
+}
+#service .detail .title-h3 {
+  position: relative;
+  font-size: 2.4rem;
+  font-family: "Vujahday Script", "Hina Mincho", serif;
+  font-weight: 400;
+  padding-left: 16px;
+  margin-bottom: 16px;
+}
+#service .detail .title-h3::after {
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 3px solid #CE7E8B;
+}
+#service .detail__card-area {
+  margin-bottom: 70px;
+}
+#service .detail__card-area .cards {
+  padding-inline: 15px;
+}
+#service .detail__card-area .cards .card {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  border-top: 1px solid #CE7E8B;
+  padding: 10px 20px;
+  margin-bottom: 24px;
+}
+#service .detail__card-area .cards .card__header {
+  color: #CE7E8B;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+#service .detail__card-area .cards .card__header .num {
+  font-size: 2.5rem;
+  font-family: "Hina Mincho", serif;
+}
+#service .detail__card-area .cards .card__body {
+  font-weight: 300;
+}
+#service .detail__card-area .cards .card__body .title {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Hina Mincho", serif;
+  margin-bottom: 10px;
+}
+#service .detail__card-area .cards .card__body .lead {
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+#service .detail__card-area .cards .card__body .list {
+  list-style: disc;
+  list-style-position: inside;
+  margin-bottom: 10px;
+}
+#service .detail .cta {
+  position: relative;
+  text-align: center;
+  background: #FEF7EE;
+  padding-bottom: 39px;
+}
+#service .detail .cta__title {
+  font-size: 2.2rem;
+  color: #CE7E8B;
+  font-family: "Hina Mincho", serif;
+  margin-bottom: 10px;
+}
+#service .detail .cta__text {
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+#service .detail .cta__img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -64px;
+}
+#service #sakura .card-section-sakura {
+  height: 450vh;
+  position: relative;
+}
+#service #sakura .card-section-sakura .box {
+  height: 80vh;
+  position: sticky;
+  top: 60px;
+}
+#service #sakura .card-section-sakura .box .cards {
+  height: 100%;
+  position: relative;
+}
+#service #sakura .card-section-sakura .box .cards .card {
+  width: 93%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%) translateY(40px);
+  transition: 0.7s ease;
+  margin: 0 auto;
+}
+#service #sakura .card-section-sakura .box .cards .card.active {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+#service #sakura .card-section-sakura .box .card-nav {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 10;
+}
+#service #sakura .card-section-sakura .box .card-nav__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #CE7E8B;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+#service #sakura .card-section-sakura .box .card-nav__dot.active {
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  background: url("../img/card-point.png") center/contain no-repeat;
+  background-color: transparent;
+}
+#service #movie {
+  position: relative;
+  background-color: #FFFFFF;
+}
+#service #movie .card {
+  background-color: rgba(250, 232, 228, 0.3);
+}
+#service #movie .white-bg {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#service #esports {
+  position: relative;
+}
+#service #esports .card-section-esports {
+  height: 250vh;
+  position: relative;
+}
+#service #esports .card-section-esports .box {
+  height: 70vh;
+  position: sticky;
+  top: 60px;
+}
+#service #esports .card-section-esports .box .cards {
+  height: 100%;
+  position: relative;
+}
+#service #esports .card-section-esports .box .cards .card {
+  width: 93%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%) translateY(40px);
+  transition: 0.7s ease;
+  margin: 0 auto;
+}
+#service #esports .card-section-esports .box .cards .card.active {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+#service #esports .card-section-esports .box .card-nav {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 10;
+}
+#service #esports .card-section-esports .box .card-nav__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #CE7E8B;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+#service #esports .card-section-esports .box .card-nav__dot.active {
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  background: url("../img/card-point.png") center/contain no-repeat;
+  background-color: transparent;
+}
+#service #esports .white-bg {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -35px;
+  transform: rotate(180deg);
+}
+#service .contact {
+  color: #FFFFFF;
+  text-align: left;
+  background-color: #FFFFFF;
+  padding-block: 64px;
+}
+#service .contact .wrapper .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: url(../img/contact-bg.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  padding: 30px;
+}
+#service .contact .wrapper .flex .left .contact-title {
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+#service .contact .wrapper .flex .left .contact-text {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+#service .contact .wrapper .flex .right .arrow {
+  width: 50px;
+  height: 50px;
 }/*# sourceMappingURL=main.css.map */
