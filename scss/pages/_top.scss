@@ -260,6 +260,7 @@
         text-align: left;
         background-color: $color-white;
         padding-block: 64px;
+        position: relative;
 
         .wrapper {
             .flex {
@@ -293,6 +294,14 @@
                     }
                 }
             }
+        }
+
+        .before-footer-deco {
+            width: 150px;
+            overflow: hidden;
+            position: absolute;
+            bottom: -20%;
+            right:0;
         }
     }
 }
