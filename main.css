@@ -335,19 +335,24 @@ img {
   width: 170px;
   position: absolute;
 }
+@media (max-width: 370px) {
+  #service .reason__list .item {
+    width: 150px;
+  }
+}
 #service .reason__list .item:nth-child(1) {
   top: 0;
   left: 0;
   z-index: 3;
 }
 #service .reason__list .item:nth-child(2) {
-  top: 30px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
 }
 #service .reason__list .item:nth-child(3) {
-  top: 10px;
+  top: 0;
   right: 0;
   z-index: 1;
 }

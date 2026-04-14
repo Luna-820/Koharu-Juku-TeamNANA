@@ -73,6 +73,10 @@
         width: 170px;
         position: absolute;
 
+        @include mx.sp-370 {
+          width: 150px;
+        }
+
         &:nth-child(1) {
           top: 0;
           left: 0;
@@ -80,14 +84,14 @@
         }
 
         &:nth-child(2) {
-          top: 30px;
+          top: 50px;
           left: 50%;
           transform: translateX(-50%);
           z-index: 2;
         }
 
         &:nth-child(3) {
-          top: 10px;
+          top: 0;
           right: 0;
           z-index: 1;
         }
