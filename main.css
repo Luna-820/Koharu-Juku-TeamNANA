@@ -442,6 +442,9 @@ img {
   text-decoration: underline;
 }
 
+#top {
+  overflow-x: hidden;
+}
 #top .section-title-span {
   color: #CE7E8B;
   font-family: "Vujahday Script", "Hina Mincho", serif;
@@ -680,10 +683,10 @@ img {
 }
 #top .contact .before-footer-deco {
   width: 150px;
-  overflow: hidden;
   position: absolute;
-  bottom: -20%;
-  right: 0;
+  right: -5%;
+  bottom: -30px;
+  z-index: 10;
 }
 
 #about .fv {
