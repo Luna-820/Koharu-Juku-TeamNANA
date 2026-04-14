@@ -1,2 +1,88 @@
-@use '../mixin' as mx;   
+@use '../mixin' as mx;
 @use '../base/base' as *;
+
+.side-menu {
+    display: none;
+
+    @media (min-width: 1024px) {
+        display: block;
+        position: fixed;
+        top: 45%;
+        transform: translateY(-50%);
+        left: calc(50% + 300px);
+        z-index: 100;
+
+        &__inner {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            padding: 60px 40px;
+            border-radius: 120px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        &__list {
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin-bottom: 20px;
+
+                a {
+                    position: relative;
+                    display: block;
+                    padding-left: 45px;
+                    text-decoration: none;
+                    color: $color-black;
+                    font-family: $font-family-section-title;
+                    font-size: 2.0rem;
+                    transition: color 0.3s ease;
+
+                    .sakura-icon {
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%) translateX(-10px);
+                        width: 50px;
+                        height: auto;
+                        opacity: 0;
+                        transition: all 0.3s ease;
+                        pointer-events: none;
+                    }
+
+                    &:hover {
+                        color: $color-deep-pink;
+
+                        .sakura-icon {
+                            opacity: 1;
+                            transform: translateY(-50%) translateX(0);
+                        }
+                    }
+                }
+
+                &.is-active a {
+                    color: $color-deep-pink;
+                    .sakura-icon {
+                        opacity: 1;
+                        transform: translateY(-50%) translateX(0);
+                    }
+                }
+            }
+        }
+
+        &__sub {
+            margin-top: 40px;
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+            padding-top: 30px;
+
+            .side-menu__list a {
+                font-size: 2.0rem;
+                color: $color-black;
+                font-family: "Old Standard TT", sans-serif;
+
+                &:hover {
+                    color: $color-deep-pink;
+                }
+            }
+        }
+    }
+}
