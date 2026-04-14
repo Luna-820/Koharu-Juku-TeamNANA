@@ -1,83 +1,368 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      一般社団法人
-      心晴塾｜知多半島を桜の半島へ。地域活性化・環境・教育プロジェクト
-    </title>
-    <meta
-      name="description"
-      content="一般社団法人 心晴塾は、知多半島に10年で1万本の桜を植樹し、観光資源の創出、地域経済の活性化、次世代教育を推進しています。桜オーナー制度やeスポーツを通じた多世代交流など、持続可能な地域づくりを共創するパートナー・スポンサーを募集中です。" />
 
-    <!-- Googleフォント -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Noto+Sans+JP:wght@100..900&family=Sassy+Frass&family=Vujahday+Script&display=swap"
-      rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    一般社団法人
+    心晴塾｜知多半島を桜の半島へ。地域活性化・環境・教育プロジェクト
+  </title>
+  <meta name="description"
+    content="一般社団法人 心晴塾は、知多半島に10年で1万本の桜を植樹し、観光資源の創出、地域経済の活性化、次世代教育を推進しています。桜オーナー制度やeスポーツを通じた多世代交流など、持続可能な地域づくりを共創するパートナー・スポンサーを募集中です。" />
 
-    <!-- css -->
-    <link rel="stylesheet" href="main.css" />
-  </head>
-  <body>
-    <div class="petals">
-      <!-- 画面左 -->
-      <div class="petal" style="left: 5%; animation-duration: 13s;  animation-delay: 0s;   width: 30px; height: 30px;"></div>
-      <div class="petal" style="left: 10%; animation-duration: 13s;  animation-delay: 6s;   width: 50px; height: 50px;"></div>
-      <div class="petal" style="left: 25%; animation-duration: 13s;  animation-delay: 2.5s;   width: 36px; height: 36px;"></div>
-      <div class="petal" style="left: 20%; animation-duration: 13s;  animation-delay: 10s;   width: 40px; height: 40px;"></div>
-      <!-- 画面右 -->
-      <div class="petal" style="left: 70%; animation-duration: 13s;  animation-delay: 6s;   width: 32px; height: 32px;"></div>
-      <div class="petal" style="left: 82%; animation-duration: 13s; animation-delay: 1s; width: 40px; height: 40px;"></div>
-      <div class="petal" style="left: 94%;  animation-duration: 13s; animation-delay: 10s; width: 34px; height: 34px;"></div>
+  <!-- Googleフォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Noto+Sans+JP:wght@100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Sassy+Frass&family=Vujahday+Script&display=swap"
+    rel="stylesheet" />
+
+  <!-- css -->
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+  <aside class="side-menu">
+    <div class="side-menu__inner">
+      <nav class="side-menu__nav">
+        <ul class="side-menu__list">
+          <li class="is-active">
+            <a href="index.html">
+              <img src="img/header-deco.png" alt="" class="sakura-icon">
+              トップ
+            </a>
+          </li>
+          <li>
+            <a href="service.html">
+              <img src="img/header-deco.png" alt="" class="sakura-icon">
+              事業内容
+            </a>
+          </li>
+          <li>
+            <a href="about.html">
+              <img src="img/header-deco.png" alt="" class="sakura-icon">
+              私たちについて
+            </a>
+          </li>
+          <li>
+            <a href="blog.html">
+              <img src="img/header-deco.png" alt="" class="sakura-icon">
+              最新情報
+            </a>
+          </li>
+          <li>
+            <a href="sponsor.html">
+              <img src="img/header-deco.png" alt="" class="sakura-icon">
+              スポンサー
+            </a>
+          </li>
+          <li>
+            <a href="contact.html">
+              <img src="img/header-deco.png" alt="" class="sakura-icon">
+              お問い合わせ
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="side-menu__sub">
+        <ul class="side-menu__list">
+          <li>
+            <a href="#" target="_blank">
+              <img src="img/header-deco.png" alt="" class="sakura-icon">
+              Youtube
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="img/header-deco.png" alt="" class="sakura-icon">
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="img/header-deco.png" alt="" class="sakura-icon">
+              Tiktok
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
+  </aside>
 
-    <div class="body"> <!-- .body 430px固定 -->
-      <div class="body__inner"> <!-- inner スクロール部分 -->
-        
-        <header></header>
-        
-        <main id="top">
+  <div class="petals">
+    <!-- 画面左 -->
+    <div class="petal" style="left: 5%; animation-duration: 13s;  animation-delay: 0s;   width: 30px; height: 30px;">
+    </div>
+    <div class="petal" style="left: 10%; animation-duration: 13s;  animation-delay: 6s;   width: 50px; height: 50px;">
+    </div>
+    <div class="petal" style="left: 25%; animation-duration: 13s;  animation-delay: 2.5s;   width: 36px; height: 36px;">
+    </div>
+    <div class="petal" style="left: 20%; animation-duration: 13s;  animation-delay: 10s;   width: 40px; height: 40px;">
+    </div>
+    <!-- 画面右 -->
+    <div class="petal" style="left: 70%; animation-duration: 13s;  animation-delay: 6s;   width: 32px; height: 32px;">
+    </div>
+    <div class="petal" style="left: 82%; animation-duration: 13s; animation-delay: 1s; width: 40px; height: 40px;">
+    </div>
+    <div class="petal" style="left: 94%;  animation-duration: 13s; animation-delay: 10s; width: 34px; height: 34px;">
+    </div>
+  </div>
 
-          <section>
-            <h2 class="section-title"><span>SERVICE</span>事業内容</h2>
-            <p class="lead">地域を彩る、未来をつなぐ。<br>桜の植樹から始まる３つの事業</p>
+  <div class="body"> <!-- .body 430px固定 -->
+    <div class="body__inner"> <!-- inner スクロール部分 -->
 
-            <a href="#" class="btn"><img src="img/haanbira-3.png" alt="花びら">詳しく見る</a>
-            <a href="#" class="btn"><img src="img/haanbira-3.png" alt="花びら">参加する</a>
+      <header></header>
 
-            <div class="wrapper">
+      <main id="top">
+        <section id="fv">
+          <img src="img/top-fv.png" alt="fv" class="fv-bg">
+        </section>
 
-              <div class="box-title">
+        <section id="service" class="wrapper">
+          <span class="section-title-span">SERVICE</span>
+          <h2 class="section-title">事業内容</h2>
+          <p class="text">地域を彩る、未来をつなぐ。<br>桜の植樹から始まる３つの事業</p>
+
+          <ul class="service-list">
+            <li class="item service1">
+              <a href="#sakura"><img src="img/top-service1.png" alt="service1"></a>
+            </li>
+            <li class="item service2">
+              <a href="#esports"><img src="img/top-service2.png" alt="service2"></a>
+            </li>
+            <li class="item service3">
+              <a href="#movie"><img src="img/top-service3.png" alt="service3"></a>
+            </li>
+          </ul>
+        </section>
+
+        <img src="img/top-divider1.png" alt="divider">
+
+        <div class="cta">
+          <p class="cta__title">さくらオーナーになる</p>
+          <p class="cta__text">一本の桜の木があなたの名前とともに育つ</p>
+          <div class="cta__btn">
+            <a href="#" class="btn">
+              <img src="img/haanbira-3.png" alt="花びら">
+              参加する
+            </a>
+            <a href="#" class="btn">
+              <img src="img/haanbira-3.png" alt="花びら">
+              詳しく見る
+            </a>
+          </div>
+        </div>
+
+        <img src="img/top-divider2.png" alt="">
+
+        <section id="about">
+          <span class="section-title-span">ABOUT</span>
+          <h2 class="section-title">私たちの想い</h2>
+          <p class="text">知多半島を塗り替える「意志」と「挑戦」</p>
+
+          <ul>
+            <li>
+              <img src="img/top-list1.png" alt="top-list1" class="img-left">
+              <div class="box-title wrapper">
                 <div class="hanabira">
                   <span class="sub">信念｜Philosophy</span>
                   <span class="num">01</span>
                 </div>
-                <!-- spanで囲んだらボーダーつく -->
-                <h3 class="box-title__main"><span>人のつながりを育み、</span><br><span>100年先まで続く地域の価値を創る</span></h3>
+                <h2 class="box-title__main">何を目指し、どう変えるのか</h2>
               </div>
-              
-              <div class="box-title">
+              <div class="button wrapper">
+                <a href="#" class="btn-detail">詳しく見る ></a>
+              </div>
+            </li>
+
+            <li>
+              <img src="img/top-list2.png" alt="top-list1" class="img-right">
+              <div class="box-title wrapper">
                 <div class="hanabira">
-                  <span class="sub">目的｜Vision</span>
+                  <span class="sub">信念｜Philosophy</span>
                   <span class="num">02</span>
                 </div>
-                <h3 class="box-title__main">知多半島を<br>世界に誇れる「桜の半島」へ。</h3>
+                <h2 class="box-title__main">何を目指し、どう変えるのか</h2>
               </div>
+              <div class="button wrapper">
+                <a href="#" class="btn-detail">詳しく見る ></a>
+              </div>
+            </li>
 
+            <li>
+              <img src="img/top-list3.png" alt="top-list1" class="img-left">
+              <div class="box-title wrapper">
+                <div class="hanabira">
+                  <span class="sub">信念｜Philosophy</span>
+                  <span class="num">03</span>
+                </div>
+                <h2 class="box-title__main">何を目指し、どう変えるのか</h2>
+              </div>
+              <div class="button wrapper">
+                <a href="#" class="btn-detail">詳しく見る ></a>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <img src="img/top-divider3.png" alt="divider">
+
+        <section id="cta" class="wrapper">
+          <div class="sponsor">
+            <p>多くの企業や団体が私たちの活動を支援しています</p>
+            <img src="img/top-logos.png" alt="">
+          </div>
+          <div class="cta-box">
+            <p class="cta__title">あなたの街を変える</p>
+            <p class="cta__text">一本の桜の木があなたの名前とともに育つ</p>
+            <div class="cta__btn">
+              <a href="#" class="btn">
+                <img src="img/haanbira-3.png" alt="花びら">
+                参加する
+              </a>
+              <a href="#" class="btn">
+                <img src="img/haanbira-3.png" alt="花びら">
+                詳しく見る
+              </a>
+            </div>
+          </div>
+        </section>
+        <img src="img/top-divider4.png" alt="">
+
+        <section id="news" class="wrapper">
+          <span class="section-title-span">NEWS & BLOG </span>
+          <h2 class="section-title">最新の活動</h2>
+          <p class="text">植樹、イベント、教育の現場から</p>
+
+          <div class="news-container">
+            <div class="news-list">
+              <article class="news-item">
+                <a href="#" class="news-link">
+                  <div class="news-content">
+                    <div class="news-header">
+                      <span class="sakura-icon"></span>
+                      <h3 class="news-title">春の桜植樹イベント開催</h3>
+                    </div>
+                    <p class="news-category">#桜プロジェクト</p>
+                  </div>
+                  <div class="arrow-icon"></div>
+                </a>
+              </article>
+
+              <article class="news-item">
+                <a href="#" class="news-link">
+                  <div class="news-content">
+                    <div class="news-header">
+                      <span class="sakura-icon"></span>
+                      <h3 class="news-title">春の桜植樹イベント開催</h3>
+                    </div>
+                    <p class="news-category">#桜プロジェクト</p>
+                  </div>
+                  <div class="arrow-icon"></div>
+                </a>
+              </article>
+
+              <article class="news-item">
+                <a href="#" class="news-link">
+                  <div class="news-content">
+                    <div class="news-header">
+                      <span class="sakura-icon"></span>
+                      <h3 class="news-title">春の桜植樹イベント開催</h3>
+                    </div>
+                    <p class="news-category">#桜プロジェクト</p>
+                  </div>
+                  <div class="arrow-icon"></div>
+                </a>
+              </article>
+
+              <article class="news-item">
+                <a href="#" class="news-link">
+                  <div class="news-content">
+                    <div class="news-header">
+                      <span class="sakura-icon"></span>
+                      <h3 class="news-title">春の桜植樹イベント開催</h3>
+                    </div>
+                    <p class="news-category">#桜プロジェクト</p>
+                  </div>
+                  <div class="arrow-icon"></div>
+                </a>
+              </article>
+            </div>
+          </div>
+
+          <div class="insta-container">
+            <div class="dummy-imsta">
+              <img src="img/top-insta-dummy.png" alt="">
+            </div>
+          </div>
+        </section>
+
+        <img src="img/top-divider5.png" alt="">
+
+        <section class="contact">
+          <div class="wrapper">
+            <a class="flex">
+              <div class="left">
+                <h2 class="contact-title">CONTACT</h2>
+                <p class="contact-text">ご質問やご提案は、<br>いつでもお気軽にお送りください。</p>
+              </div>
+              <div class="right">
+                <img src="img/arrow.png" alt="矢印" class="arrow">
+              </div>
+            </a>
+          </div>
+          <img src="img/top-sakura-deco2.png" alt="sakura-deco" class="before-footer-deco">
+        </section>
+
+      </main>
+
+      <footer>
+        <div class="footer__inner wrapper">
+          <div class="footer__content">
+            <div class="footer__info">
+              <h2 class="footer__logo">心晴塾</h2>
+              <div class="footer__contact">
+                <p class="footer__tel"><a href="tel:080-9496-3177">080-9496-3177</a></p>
+                <p class="footer__email"><a href="mailto:yamanaka.shokupan@gmail.com">yamanaka.shokupan@gmail.com</a>
+                </p>
+              </div>
+              <ul class="footer__sns">
+                <li><a href="#" target="_blank"><img src="img/footer-icon-fv.png" alt="Facebook"></a></li>
+                <li><a href="#" target="_blank"><img src="img/footer-icon-ig.png" alt="Instagram"></a></li>
+                <li><a href="#" target="_blank"><img src="img/footer-icon-x.png" alt="X"></a></li>
+                <li><a href="#" target="_blank"><img src="img/footer-icon-yt.png" alt="YouTube"></a></li>
+              </ul>
             </div>
 
-          </section>
+            <nav class="footer__nav">
+              <ul class="footer__menu">
+                <li><a href="service.html">トップ</a></li>
+                <li><a href="service.html">事業内容</a></li>
+                <li><a href="about.html">私たちについて</a></li>
+                <li><a href="blog.html">最新情報</a></li>
+                <li><a href="sponsor.html">スポンサー</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+              </ul>
+            </nav>
+          </div>
 
-        </main>
-        
-        <footer></footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="main.js"></script>
-      </div>
+          <div class="footer__bottom">
+            <hr class="footer__line">
+            <p class="footer__copyright">&copy; 2026年 心晴塾</p>
+            <ul class="footer__sub-links">
+              <li><a href="#">利用規約</a></li>
+              <li><a href="#">プライバシーポリシー</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="main.js"></script>
     </div>
+  </div>
 
-  </body>
+</body>
+
 </html>
