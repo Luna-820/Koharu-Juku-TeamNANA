@@ -273,6 +273,242 @@ img {
     top: 100vh;
   }
 }
+#top .section-title-span {
+  color: #CE7E8B;
+  font-family: "Vujahday Script", "Hina Mincho", serif;
+}
+#top #service {
+  background-color: #FEF7EE;
+  padding-block: 64px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#top #service .service-list {
+  position: relative;
+  width: 100%;
+  height: 550px;
+}
+#top #service .service-list .item {
+  position: absolute;
+}
+#top #service .service-list .item.service1 {
+  top: 48px;
+  left: 2%;
+  z-index: 1;
+  width: 272px;
+}
+#top #service .service-list .item.service2 {
+  top: 190px;
+  right: -5%;
+  z-index: 2;
+  width: 232px;
+}
+#top #service .service-list .item.service3 {
+  top: 310px;
+  left: 3%;
+  z-index: 3;
+  width: 230px;
+}
+#top .cta {
+  position: relative;
+  text-align: center;
+  padding-block: 24px 39px;
+}
+#top .cta__title {
+  font-size: 2.2rem;
+  color: #CE7E8B;
+  font-family: "Hina Mincho", serif;
+  margin-bottom: 10px;
+}
+#top .cta__text {
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+#top .cta__img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -64px;
+}
+#top #about {
+  background-color: #FEF7EE;
+  padding-block: 64px 20px;
+}
+#top #about ul {
+  padding-top: 64px;
+}
+#top #about ul li img {
+  padding-bottom: 20px;
+}
+#top #about ul li .img-left {
+  padding-right: 48px;
+}
+#top #about ul li .img-right {
+  padding-left: 16px;
+}
+#top #about ul li .box-title {
+  width: 400px;
+  margin-bottom: 16px;
+}
+#top #about ul li .button {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 64px;
+}
+#top #about ul li .btn-detail {
+  display: inline-block;
+  padding: 4px 24px;
+  border: 1px solid #2B2B2B;
+  border-radius: 8px;
+  color: #2B2B2B;
+  text-decoration: none;
+  font-size: 1.4rem;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+#top #about ul li .btn-detail:hover {
+  background-color: #CE7E8B;
+  color: #FFFFFF;
+  border: 1px solid #CE7E8B;
+}
+#top #cta {
+  padding-bottom: 40px;
+}
+#top #cta .sponsor {
+  padding-block: 32px;
+}
+#top #cta .sponsor p {
+  font-size: 1.6rem;
+  font-family: "Vujahday Script", "Hina Mincho", serif;
+}
+#top #cta .cta-box {
+  position: relative;
+  text-align: center;
+  padding-block: 24px 39px;
+  background-color: #FEF7EE;
+  border-radius: 10px;
+  position: relative;
+}
+#top #cta .cta-box:before {
+  content: "";
+  width: 398px;
+  height: 210px;
+  background-color: transparent;
+  border: 0.7px solid #2B2B2B;
+  border-radius: 10px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+#top #cta .cta-box__title {
+  font-size: 2.2rem;
+  color: #CE7E8B;
+  font-family: "Hina Mincho", serif;
+  margin-bottom: 10px;
+}
+#top #cta .cta-box__text {
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+#top #cta .cta-box__img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -64px;
+}
+#top #news {
+  background-color: rgb(250, 232, 228);
+  padding-block: 64px;
+}
+#top #news .news-container {
+  margin-bottom: 60px;
+  padding-top: 60px;
+}
+#top #news .news-container .news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#top #news .news-container .news-item {
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+#top #news .news-container .news-item:hover {
+  transform: translateY(-2px);
+}
+#top #news .news-container .news-item .news-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  text-decoration: none;
+  color: #2B2B2B;
+}
+#top #news .news-container .news-item .news-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+#top #news .news-container .news-item .news-header .sakura-icon {
+  width: 24px;
+  height: 24px;
+  background: url("../img/top-sakura-deco.png") no-repeat center/contain;
+  flex-shrink: 0;
+}
+#top #news .news-container .news-item .news-header .news-title {
+  font-size: 2.2rem;
+  font-weight: 400;
+  font-family: "Vujahday Script", "Hina Mincho", serif;
+}
+#top #news .news-container .news-item .news-category {
+  font-size: 1rem;
+  color: #bbb;
+  margin-left: 4px;
+  text-align: left;
+}
+#top #news .news-container .news-item .arrow-icon {
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #ffb6c1;
+  border-right: 2px solid #ffb6c1;
+  transform: rotate(45deg);
+  margin-left: 10px;
+}
+#top .contact {
+  color: #FFFFFF;
+  text-align: left;
+  background-color: #FFFFFF;
+  padding-block: 64px;
+}
+#top .contact .wrapper .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: url(../img/contact-bg.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  padding: 30px;
+}
+#top .contact .wrapper .flex .left .contact-title {
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+#top .contact .wrapper .flex .left .contact-text {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+#top .contact .wrapper .flex .right .arrow {
+  width: 50px;
+  height: 50px;
+}
+
 #about .fv {
   position: relative;
   background: url(../img/fv-img.png);
@@ -367,9 +603,6 @@ img {
 #about #mission {
   background-color: #FEF7EE;
   padding-block: 64px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 #about #mission .box-title__main {
   font-size: 1.85rem;
