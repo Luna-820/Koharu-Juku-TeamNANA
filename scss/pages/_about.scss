@@ -187,6 +187,10 @@
                 border-bottom: 1px solid $color-grey;
                 align-items: flex-start;
 
+                .email {
+                    font-size: 1.4rem;
+                }
+
                 dt {
                     width: 30%;
                     color: $color-deep-pink;
