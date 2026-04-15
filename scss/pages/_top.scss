@@ -2,7 +2,7 @@
 @use '../base/base' as *;
 
 #top {
-    overflow-x: hidden;
+    // overflow-x: hidden;
 
     .section-title-span {
         color: $color-deep-pink;
@@ -23,10 +23,11 @@
 
             .item {
                 position: absolute;
+                overflow-x: hidden;
 
                 &.service1 {
-                    top: 48px;
-                    left: 2%;
+                    top: 20px;
+                    left: 1%;
                     z-index: 1;
                     width: 272px;
                 }
@@ -39,7 +40,7 @@
                 }
 
                 &.service3 {
-                    top: 310px;
+                    top: 350px;
                     left: 3%;
                     z-index: 3;
                     width: 230px;
@@ -95,8 +96,12 @@
                 }
 
                 .box-title {
-                    width: 400px;
+                    width: 100%;
                     margin-bottom: 16px;
+
+                    &__main {
+                        font-size: 1.8rem;
+                    }
                 }
 
                 .button {
@@ -107,7 +112,7 @@
 
                 .btn-detail {
                     display: inline-block;
-                    padding: 4px 24px;
+                    padding: 4px 16px;
                     border: 1px solid $color-black;
                     border-radius: 8px;
                     color: $color-black;
@@ -149,7 +154,7 @@
 
             &:before {
                 content: "";
-                width: 398px;
+                width: 100%;
                 height: 210px;
                 background-color: transparent;
                 border: 0.7px solid $color-black;
@@ -177,6 +182,14 @@
                 position: absolute;
                 left: 0;
                 bottom: -64px;
+            }
+
+            .btn {
+                width: 160px;
+
+                img {
+                    right: -5px;
+                }
             }
         }
 
@@ -226,7 +239,7 @@
                     .sakura-icon {
                         width: 24px;
                         height: 24px;
-                        background: url('../img/top-sakura-deco.png') no-repeat center/contain;
+                        background: url('img/top-sakura-deco.png') no-repeat center/contain;
                         flex-shrink: 0;
                     }
 
@@ -269,7 +282,7 @@
                 justify-content: space-between;
                 align-items: center;
                 cursor: pointer;
-                background: url(../img/contact-bg.png);
+                background: url(img/contact-bg.png);
                 background-position: center;
                 background-size: cover;
                 border-radius: 20px;
@@ -300,10 +313,9 @@
         .before-footer-deco {
             width: 150px;
             position: absolute;
-            right:-5%;
-            bottom: -30px;
-            z-index: 10;
+            right: 0;
+            bottom: -20%;
+            overflow-x: hidden;
         }
     }
-
 }

@@ -213,7 +213,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../img/hanabira-4.png);
+  background-image: url(img/hanabira-4.png);
   background-size: cover;
   background-position: center;
 }
@@ -443,9 +443,6 @@ img {
   text-decoration: underline;
 }
 
-#top {
-  overflow-x: hidden;
-}
 #top .section-title-span {
   color: #CE7E8B;
   font-family: "Vujahday Script", "Hina Mincho", serif;
@@ -464,10 +461,11 @@ img {
 }
 #top #service .service-list .item {
   position: absolute;
+  overflow-x: hidden;
 }
 #top #service .service-list .item.service1 {
-  top: 48px;
-  left: 2%;
+  top: 20px;
+  left: 1%;
   z-index: 1;
   width: 272px;
 }
@@ -478,7 +476,7 @@ img {
   width: 232px;
 }
 #top #service .service-list .item.service3 {
-  top: 310px;
+  top: 350px;
   left: 3%;
   z-index: 3;
   width: 230px;
@@ -521,8 +519,11 @@ img {
   padding-left: 16px;
 }
 #top #about ul li .box-title {
-  width: 400px;
+  width: 100%;
   margin-bottom: 16px;
+}
+#top #about ul li .box-title__main {
+  font-size: 1.8rem;
 }
 #top #about ul li .button {
   display: flex;
@@ -531,7 +532,7 @@ img {
 }
 #top #about ul li .btn-detail {
   display: inline-block;
-  padding: 4px 24px;
+  padding: 4px 16px;
   border: 1px solid #2B2B2B;
   border-radius: 8px;
   color: #2B2B2B;
@@ -565,7 +566,7 @@ img {
 }
 #top #cta .cta-box:before {
   content: "";
-  width: 398px;
+  width: 100%;
   height: 210px;
   background-color: transparent;
   border: 0.7px solid #2B2B2B;
@@ -589,6 +590,12 @@ img {
   position: absolute;
   left: 0;
   bottom: -64px;
+}
+#top #cta .cta-box .btn {
+  width: 160px;
+}
+#top #cta .cta-box .btn img {
+  right: -5px;
 }
 #top #news {
   background-color: rgb(250, 232, 228);
@@ -629,7 +636,7 @@ img {
 #top #news .news-container .news-item .news-header .sakura-icon {
   width: 24px;
   height: 24px;
-  background: url("../img/top-sakura-deco.png") no-repeat center/contain;
+  background: url("img/top-sakura-deco.png") no-repeat center/contain;
   flex-shrink: 0;
 }
 #top #news .news-container .news-item .news-header .news-title {
@@ -663,7 +670,7 @@ img {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  background: url(../img/contact-bg.png);
+  background: url(img/contact-bg.png);
   background-position: center;
   background-size: cover;
   border-radius: 20px;
@@ -685,9 +692,9 @@ img {
 #top .contact .before-footer-deco {
   width: 150px;
   position: absolute;
-  right: -5%;
-  bottom: -30px;
-  z-index: 10;
+  right: 0;
+  bottom: -20%;
+  overflow-x: hidden;
 }
 
 #about .fv {
@@ -837,6 +844,9 @@ img {
   padding: 24px 0;
   border-bottom: 1px solid #f6f6f6;
   align-items: flex-start;
+}
+#about #company .profile-list .profile-item .email {
+  font-size: 1.4rem;
 }
 #about #company .profile-list .profile-item dt {
   width: 30%;
@@ -1247,6 +1257,176 @@ img {
   font-weight: 400;
 }
 #service .contact .wrapper .flex .right .arrow {
+  width: 50px;
+  height: 50px;
+}
+
+#sponsor .fv {
+  position: relative;
+  background: url(../img/fv-img.png);
+  background-position: center;
+  background-size: cover;
+  padding: 100px 15px;
+  margin-bottom: 60px;
+}
+#sponsor .fv .section-title {
+  color: #FFFFFF;
+}
+#sponsor .fv .section-title span {
+  color: #FFFFFF;
+}
+#sponsor .fv .fv-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+#sponsor .fv .hanabira {
+  position: absolute;
+}
+#sponsor .fv .hanabira-1 {
+  width: 80px;
+  height: 80px;
+  left: 50px;
+  bottom: 10px;
+  z-index: 4;
+}
+#sponsor .fv .hanabira-2 {
+  width: 57px;
+  height: 57px;
+  left: 80px;
+  bottom: 5px;
+  transform: rotate(15deg);
+  z-index: 3;
+}
+#sponsor .fv .hanabira-3 {
+  width: 66px;
+  height: 66px;
+  right: 30px;
+  bottom: 30px;
+  transform: rotate(150deg);
+  z-index: 2;
+}
+#sponsor .filter-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 34px;
+}
+#sponsor .filter-list li {
+  border: 1px solid #2B2B2B;
+  border-radius: 11px;
+  padding: 4px 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#sponsor .filter-list li:hover, #sponsor .filter-list li.active {
+  background-color: #CE7E8B;
+  border: 1px solid #CE7E8B;
+  color: #FFFFFF;
+}
+#sponsor .sponsors {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 20px 5%;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+#sponsor .sponsors .sponsor-box {
+  background-color: rgb(250, 232, 228);
+  width: 47.5%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  box-sizing: border-box;
+}
+#sponsor .sponsors .sponsor-box .logo {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sponsor .sponsors .sponsor-box .info {
+  text-align: left;
+  margin-top: auto;
+}
+#sponsor .sponsors .sponsor-box .info .name {
+  font-family: "Hina Mincho", serif;
+  line-height: 1;
+  font-size: 1.6rem;
+}
+#sponsor .sponsors .sponsor-box .info .tag {
+  font-size: 1.2rem;
+  color: #666;
+}
+#sponsor .pagination {
+  margin: 60px auto;
+  text-align: center;
+}
+#sponsor .pagination .nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+#sponsor .pagination .page-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 26px;
+  border-radius: 8px;
+  border: 1px solid #2B2B2B;
+  background: #FFFFFF;
+  color: #2B2B2B;
+  text-decoration: none;
+  font-family: "Hina Mincho", serif;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+#sponsor .pagination .page-numbers.current {
+  background: #CE7E8B;
+  border-color: #CE7E8B;
+  color: #FFFFFF;
+}
+#sponsor .pagination .page-numbers:hover:not(.current) {
+  background: rgba(206, 126, 139, 0.1);
+  border-color: #CE7E8B;
+  color: #CE7E8B;
+}
+#sponsor .contact {
+  color: #FFFFFF;
+  text-align: left;
+  background-color: #FFFFFF;
+  padding-block: 64px;
+}
+#sponsor .contact .wrapper .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: url(../img/contact-bg.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  padding: 30px;
+}
+#sponsor .contact .wrapper .flex .left .contact-title {
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+#sponsor .contact .wrapper .flex .left .contact-text {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+#sponsor .contact .wrapper .flex .right .arrow {
   width: 50px;
   height: 50px;
 }
