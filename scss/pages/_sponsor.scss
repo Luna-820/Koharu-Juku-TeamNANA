@@ -1,2 +1,208 @@
-@use '../mixin' as mx;   
+@use '../mixin' as mx;
 @use '../base/base' as *;
+
+#sponsor {
+    .fv {
+        position: relative;
+        background: url(../img/fv-img.png);
+        background-position: center;
+        background-size: cover;
+        padding: 100px 15px;
+        margin-bottom: 60px;
+
+        .section-title {
+            color: $color-white;
+
+            span {
+                color: $color-white;
+            }
+        }
+
+        .fv-bg {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .hanabira {
+            position: absolute;
+        }
+
+        .hanabira-1 {
+            width: 80px;
+            height: 80px;
+            left: 50px;
+            bottom: 10px;
+            z-index: 4;
+        }
+
+        .hanabira-2 {
+            width: 57px;
+            height: 57px;
+            left: 80px;
+            bottom: 5px;
+            transform: rotate(15deg);
+            z-index: 3;
+        }
+
+        .hanabira-3 {
+            width: 66px;
+            height: 66px;
+            right: 30px;
+            bottom: 30px;
+            transform: rotate(150deg);
+            z-index: 2;
+        }
+    }
+
+    .filter-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding-bottom: 34px;
+
+        li {
+            border: 1px solid $color-black;
+            border-radius: 11px;
+            padding: 4px 16px;
+            transition: 0.3s;
+            cursor: pointer;
+
+            &:hover,
+            &.active {
+                background-color: $color-deep-pink;
+                border: 1px solid $color-deep-pink;
+                color: $color-white;
+            }
+        }
+    }
+
+    .sponsors {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 20px 5%; 
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+
+        .sponsor-box {
+            background-color: $color-pale-pink;
+            width: 47.5%;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 15px 20px;
+            box-sizing: border-box;
+
+            .logo {
+                background-color: $color-white;
+                border-radius: 10px;
+                width: 100%;
+                // aspect-ratio: 16 / 9;
+                padding: 10px;
+                margin-bottom: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .info {
+                text-align: left;
+                margin-top: auto; 
+
+                .name {
+                    font-family: "Hina Mincho", serif;
+                    line-height: 1;
+                    font-size: 1.6rem;
+                }
+
+                .tag {
+                    font-size: 1.2rem;
+                    color: #666;
+                }
+            }
+        }
+    }
+
+    .pagination {
+        margin: 60px auto;
+        text-align: center;
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 7px;
+        }
+
+        .page-numbers {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 26px;
+            border-radius: 8px;
+            border: 1px solid $color-black;
+            background: $color-white;
+            color: $color-black;
+            text-decoration: none;
+            font-family: "Hina Mincho", serif;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+
+            &.current {
+                background: $color-deep-pink;
+                border-color: $color-deep-pink;
+                color: $color-white;
+            }
+
+            &:hover:not(.current) {
+                background: rgba($color-deep-pink, 0.1);
+                border-color: $color-deep-pink;
+                color: $color-deep-pink;
+            }
+        }
+    }
+
+    .contact {
+        color: $color-white;
+        text-align: left;
+        background-color: $color-white;
+        padding-block: 64px;
+
+        .wrapper {
+            .flex {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                background: url(../img/contact-bg.png);
+                background-position: center;
+                background-size: cover;
+                border-radius: 20px;
+                padding: 30px;
+
+                .left {
+                    .contact-title {
+                        font-size: 2.8rem;
+                        font-weight: $fw-base;
+                        margin-bottom: 8px;
+                    }
+
+                    .contact-text {
+                        font-size: $fs-small;
+                        font-weight: $fw-base;
+                    }
+                }
+
+                .right {
+                    .arrow {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
