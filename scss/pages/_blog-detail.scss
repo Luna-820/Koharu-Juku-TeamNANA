@@ -1,2 +1,192 @@
-@use '../mixin' as mx;   
-@use '../base/base' as *;
+@use "../mixin" as mx;
+@use "../base/base" as *;
+
+#blog-detail {
+  .fv {
+    position: relative;
+    background: url(../img/fv-img.png);
+    background-position: center;
+    background-size: cover;
+    padding: 100px 15px;
+    // margin-bottom: 60px;
+
+    .section-title {
+      color: $color-white;
+
+      span {
+        color: $color-white;
+      }
+    }
+
+    .fv-bg {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    .hanabira {
+      position: absolute;
+    }
+
+    .hanabira-1 {
+      width: 80px;
+      height: 80px;
+      left: 50px;
+      bottom: 10px;
+      z-index: 4;
+    }
+
+    .hanabira-2 {
+      width: 57px;
+      height: 57px;
+      left: 80px;
+      bottom: 5px;
+      transform: rotate(15deg);
+      z-index: 3;
+    }
+
+    .hanabira-3 {
+      width: 66px;
+      height: 66px;
+      right: 30px;
+      bottom: 30px;
+      transform: rotate(150deg);
+      z-index: 2;
+    }
+  }
+
+  //
+  .blog {
+    position: relative;
+    background: linear-gradient(to bottom, $color-white, rgba(250, 232, 228, .5));
+    padding-block: 60px;
+
+    &__category-nav {
+      font-family: "Hina Mincho", serif;
+      margin-bottom: 48px;
+
+      .list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 11px;
+
+        @include mx.sp-370 {
+          gap: 8px;
+        }
+
+        .item {
+          color: $color-black;
+          border: 0.5px solid $color-black;
+          border-radius: 11px;
+          padding: 8px 16px;
+
+          @include mx.sp-370 {
+            padding: 8px 10px;
+          }
+
+          &.is-active {
+            color: $color-white;
+            border: 0.5px solid $color-deep-pink;
+            background: $color-deep-pink;
+          }
+        }
+      }
+    }
+
+    .post {
+      // background: $color-white;
+      border-radius: 10px;
+      margin-bottom: 46px;
+
+      &__header {
+        font-family: "Hina Mincho", serif;
+        margin-bottom: 15px;
+        
+        .title {
+          font-size: 2.2rem;
+          font-weight: $fw-base;
+          display: flex;
+          justify-content: left;
+          align-items: center;
+        }
+        
+        .category {
+          text-align: left;
+          color: #909090;
+          font-size: 1rem;
+        }
+      }
+      
+      &__img {
+        border-radius: 10px;
+        margin-bottom: 30px;
+      }
+
+      &__textarea {
+        text-align: left;
+        border-left: 1px solid $color-deep-pink;
+        padding-left: 15px;
+      }
+      
+      &__back {
+        border: .5px solid $color-black;
+        border-radius: 10px;
+        padding: 10px 20px;
+      }
+    }
+
+    &__bg {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -43px;
+
+      @include mx.sp-370 {
+        bottom: -35px;
+      }
+    }
+  }
+
+  .contact {
+    color: $color-white;
+    text-align: left;
+    background-color: $color-white;
+    padding-block: 64px;
+
+    .wrapper {
+      .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        background: url(../img/contact-bg.png);
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+        padding: 30px;
+
+        .left {
+          .contact-title {
+            font-size: 2.8rem;
+            font-weight: $fw-base;
+            margin-bottom: 8px;
+          }
+
+          .contact-text {
+            font-size: $fs-small;
+            font-weight: $fw-base;
+          }
+        }
+
+        .right {
+          .arrow {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}
