@@ -8,7 +8,6 @@
     background-position: center;
     background-size: cover;
     padding: 100px 15px;
-    // margin-bottom: 60px;
 
     .section-title {
       color: $color-white;
@@ -59,7 +58,7 @@
   // 
   .blog {
     position: relative;
-    background: rgba(250, 232, 228, .5);
+    background: #FDF4F1;
     padding-block: 60px;
 
     &__category-nav {
@@ -71,12 +70,20 @@
         justify-content: center;
         align-items: center;
         gap: 11px;
+
+        @include mx.sp-370 {
+          gap: 8px;
+        }
         
         .item {
           color: $color-black;
           border: .5px solid $color-black;
           border-radius: 11px;
           padding: 8px 16px;
+
+          @include mx.sp-370 {
+            padding: 8px 10px;
+          }
           
           &.is-active {
             color: $color-white;
@@ -149,7 +156,11 @@
       width: 100%;
       position: absolute;
       left: 0;
-      bottom: -48.1px;
+      bottom: -43px;
+
+      @include mx.sp-370 {
+        bottom: -35px;
+      }
     }
   }
     
@@ -188,6 +199,11 @@
           .arrow {
             width: 50px;
             height: 50px;
+
+            @include mx.sp-370 {
+              width: 30px;
+              height: 30px;
+            }
           }
         }
       }

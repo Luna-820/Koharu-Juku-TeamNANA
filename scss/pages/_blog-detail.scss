@@ -72,11 +72,19 @@
         align-items: center;
         gap: 11px;
 
+        @include mx.sp-370 {
+          gap: 8px;
+        }
+
         .item {
           color: $color-black;
           border: 0.5px solid $color-black;
           border-radius: 11px;
           padding: 8px 16px;
+
+          @include mx.sp-370 {
+            padding: 8px 10px;
+          }
 
           &.is-active {
             color: $color-white;
@@ -133,7 +141,11 @@
       width: 100%;
       position: absolute;
       left: 0;
-      bottom: -48.1px;
+      bottom: -43px;
+
+      @include mx.sp-370 {
+        bottom: -35px;
+      }
     }
   }
 
