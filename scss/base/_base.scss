@@ -76,8 +76,8 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    position: fixed;
-    z-index: 0;
+    // position: fixed;
+    // z-index: 0;
     
     @include mx.tb {
         background-image: none;
@@ -279,6 +279,14 @@ img {
     background-color: $color-green;
     border-radius: 40px;
     padding-block: 10px;
+    border: 3px solid transparent;
+
+    &:hover {
+        color: $color-green;
+        background-color: $color-cream;
+        border: 2px solid $color-green;
+
+    }
 
     img {
         width: 50px;
@@ -286,6 +294,26 @@ img {
         position: absolute;
         right: 5px;
         bottom: -20px;
+    }
+}
+
+// シンプル黒い線ボタン→ピンク＋白文字ホバー
+.btn-simple {
+    display: inline-block;
+    padding: 4px 16px;
+    border: 1px solid $color-black;
+    border-radius: 8px;
+    color: $color-black;
+    text-decoration: none;
+    font-size: 1.4rem;
+    background-color: transparent;
+    transition: all 0.3s;
+    font-family: "Hina Mincho", serif;
+
+    &:hover {
+        background-color: $color-deep-pink;
+        color: $color-white;
+        border: 1px solid $color-deep-pink;
     }
 }
 
