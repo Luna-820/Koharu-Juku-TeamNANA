@@ -78,7 +78,7 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   margin: 0;
-  background-image: url(../img/background.png);
+  background-image: url(img/background.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -160,16 +160,16 @@ img {
   top: -80px;
   width: 40px;
   height: 40px;
-  background-image: url(../img/haanbira-1.png);
+  background-image: url(img/haanbira-1.png);
   background-size: contain;
   background-repeat: no-repeat;
   animation: fall linear infinite;
 }
 .petals .petal:nth-child(2) {
-  background-image: url(../img/haanbira-3.png);
+  background-image: url(img/haanbira-3.png);
 }
 .petals .petal:nth-child(3), .petals .petal:nth-child(5) {
-  background-image: url(../img/haanbira-2.png);
+  background-image: url(img/haanbira-2.png);
 }
 
 .wrapper {
@@ -699,7 +699,7 @@ img {
 
 #about .fv {
   position: relative;
-  background: url(../img/fv-img.png);
+  background: url(img/fv-img.png);
   background-position: center;
   background-size: cover;
   padding: 100px 15px;
@@ -894,7 +894,7 @@ img {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  background: url(../img/contact-bg.png);
+  background: url(img/contact-bg.png);
   background-position: center;
   background-size: cover;
   border-radius: 20px;
@@ -1271,7 +1271,7 @@ img {
 
 #sponsor .fv {
   position: relative;
-  background: url(../img/fv-img.png);
+  background: url(img/fv-img.png);
   background-position: center;
   background-size: cover;
   padding: 100px 15px;
@@ -1419,7 +1419,7 @@ img {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  background: url(../img/contact-bg.png);
+  background: url(img/contact-bg.png);
   background-position: center;
   background-size: cover;
   border-radius: 20px;
