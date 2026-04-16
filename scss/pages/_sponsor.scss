@@ -140,16 +140,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 26px;
-            border-radius: 8px;
-            border: 1px solid $color-black;
-            background: $color-white;
-            color: $color-black;
-            text-decoration: none;
-            font-family: "Hina Mincho", serif;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
+            width: 50px;
+            height: 30px;
 
             &.current {
                 background: $color-deep-pink;

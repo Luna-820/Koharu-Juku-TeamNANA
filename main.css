@@ -82,8 +82,6 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  position: fixed;
-  z-index: 0;
 }
 @media (max-width: 768px) {
   body {
@@ -105,8 +103,7 @@ a:hover {
 img {
   width: 100%;
   vertical-align: bottom;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .body {
@@ -246,6 +243,12 @@ img {
   background-color: #B6D176;
   border-radius: 40px;
   padding-block: 10px;
+  border: 3px solid transparent;
+}
+.btn:hover {
+  color: #B6D176;
+  background-color: #FEF7EE;
+  border: 2px solid #B6D176;
 }
 .btn img {
   width: 50px;
@@ -253,6 +256,24 @@ img {
   position: absolute;
   right: 5px;
   bottom: -20px;
+}
+
+.btn-simple {
+  display: inline-block;
+  padding: 4px 16px;
+  border: 1px solid #2B2B2B;
+  border-radius: 8px;
+  color: #2B2B2B;
+  text-decoration: none;
+  font-size: 1.4rem;
+  background-color: transparent;
+  transition: all 0.3s;
+  font-family: "Hina Mincho", serif;
+}
+.btn-simple:hover {
+  background-color: #CE7E8B;
+  color: #FFFFFF;
+  border: 1px solid #CE7E8B;
 }
 
 .text {
@@ -529,22 +550,6 @@ img {
   display: flex;
   justify-content: flex-start;
   padding-bottom: 64px;
-}
-#top #about ul li .btn-detail {
-  display: inline-block;
-  padding: 4px 16px;
-  border: 1px solid #2B2B2B;
-  border-radius: 8px;
-  color: #2B2B2B;
-  text-decoration: none;
-  font-size: 1.4rem;
-  background-color: transparent;
-  transition: all 0.3s;
-}
-#top #about ul li .btn-detail:hover {
-  background-color: #CE7E8B;
-  color: #FFFFFF;
-  border: 1px solid #CE7E8B;
 }
 #top #cta {
   padding-bottom: 40px;
@@ -1379,16 +1384,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 26px;
-  border-radius: 8px;
-  border: 1px solid #2B2B2B;
-  background: #FFFFFF;
-  color: #2B2B2B;
-  text-decoration: none;
-  font-family: "Hina Mincho", serif;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
+  width: 50px;
+  height: 30px;
 }
 #sponsor .pagination .page-numbers.current {
   background: #CE7E8B;
