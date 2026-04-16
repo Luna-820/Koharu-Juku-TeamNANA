@@ -4,14 +4,14 @@
 #blog {
   .fv {
     position: relative;
-    background: url(../img/fv-img.png);
+    background: url(img/fv-img.png);
     background-position: center;
     background-size: cover;
     padding: 100px 15px;
 
     .section-title {
       color: $color-white;
-      
+
       span {
         color: $color-white;
       }
@@ -27,7 +27,7 @@
     .hanabira {
       position: absolute;
     }
-    
+
     .hanabira-1 {
       width: 80px;
       height: 80px;
@@ -35,7 +35,7 @@
       bottom: 10px;
       z-index: 4;
     }
-    
+
     .hanabira-2 {
       width: 57px;
       height: 57px;
@@ -55,16 +55,16 @@
     }
   }
 
-  // 
+  //
   .blog {
     position: relative;
-    background: #FDF4F1;
+    background: #fdf4f1;
     padding-block: 60px;
 
     &__category-nav {
       font-family: "Hina Mincho", serif;
       margin-bottom: 48px;
-      
+
       .list {
         display: flex;
         justify-content: center;
@@ -74,21 +74,28 @@
         @include mx.sp-370 {
           gap: 8px;
         }
-        
+
         .item {
           color: $color-black;
-          border: .5px solid $color-black;
+          border: 0.5px solid $color-black;
           border-radius: 11px;
+          transition: all 0.3s;
           padding: 8px 16px;
 
           @include mx.sp-370 {
             padding: 8px 10px;
           }
-          
+
           &.is-active {
             color: $color-white;
-            border: .5px solid $color-deep-pink;
+            border: 0.5px solid $color-deep-pink;
             background: $color-deep-pink;
+          }
+
+          &:hover {
+            background-color: $color-deep-pink;
+            color: $color-white;
+            border: .5px solid $color-deep-pink;
           }
         }
       }
@@ -104,41 +111,41 @@
           width: 100%;
           height: 100%;
           padding: 20px;
-          
+
           .img {
             border-radius: 10px;
             margin-bottom: 20px;
           }
-          
+
           .flex {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
+
             &__left {
               flex: 1;
               font-family: "Hina Mincho", serif;
-              
+
               .title {
                 font-size: 2.2rem;
                 font-weight: $fw-base;
                 display: flex;
                 justify-content: left;
                 align-items: center;
-                
+
                 .sakura {
                   width: 29px;
                   margin-right: 8px;
                 }
               }
-              
+
               .category {
                 text-align: left;
                 color: #909090;
                 font-size: 1rem;
               }
             }
-            
+
             &__right {
               width: 29px;
 
@@ -148,7 +155,45 @@
             }
           }
         }
+      }
+    }
 
+    .pagination {
+      margin: 60px auto;
+      text-align: center;
+
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 7px;
+      }
+
+      .page-numbers {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 26px;
+        border-radius: 8px;
+        border: 1px solid $color-black;
+        background: $color-white;
+        color: $color-black;
+        text-decoration: none;
+        font-family: "Hina Mincho", serif;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+
+        &.current {
+          background: $color-deep-pink;
+          border-color: $color-deep-pink;
+          color: $color-white;
+        }
+
+        &:hover:not(.current) {
+          background: rgba($color-deep-pink, 0.1);
+          border-color: $color-deep-pink;
+          color: $color-deep-pink;
+        }
       }
     }
 
@@ -163,50 +208,55 @@
       }
     }
   }
-    
-  .contact {
-    color: $color-white;
-    text-align: left;
-    background-color: $color-white;
-    padding-block: 64px;
 
-    .wrapper {
-      .flex {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        background: url(../img/contact-bg.png);
-        background-position: center;
-        background-size: cover;
-        border-radius: 20px;
-        padding: 30px;
-        
-        .left {
-          .contact-title {
-            font-size: 2.8rem;
-            font-weight: $fw-base;
-            margin-bottom: 8px;
-          }
+    .contact {
+        color: $color-white;
+        text-align: left;
+        background-color: $color-white;
+        padding-block: 64px;
+        position: relative;
 
-          .contact-text {
-            font-size: $fs-small;
-            font-weight: $fw-base;
-          }
-        }
+        .wrapper {
+            .flex {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                background: url(img/contact-bg.png);
+                background-position: center;
+                background-size: cover;
+                border-radius: 20px;
+                padding: 30px;
 
-        .right {
-          .arrow {
-            width: 50px;
-            height: 50px;
+                .left {
+                    .contact-title {
+                        font-size: 2.8rem;
+                        font-weight: $fw-base;
+                        margin-bottom: 8px;
+                    }
 
-            @include mx.sp-370 {
-              width: 30px;
-              height: 30px;
+                    .contact-text {
+                        font-size: $fs-small;
+                        font-weight: $fw-base;
+                    }
+                }
+
+                .right {
+                    .arrow {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
             }
-          }
         }
-      }
+
+        .before-footer-deco {
+            width: 150px;
+            position: absolute;
+            right: 0;
+            bottom: -20%;
+            overflow-x: hidden;
+        }
     }
-  }
+
 }

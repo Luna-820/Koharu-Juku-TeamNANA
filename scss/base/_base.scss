@@ -72,7 +72,7 @@ body {
     -webkit-font-smoothing: antialiased;
     margin: 0;
     
-    background-image: url(../img/background.png);
+    background-image: url(img/background.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -166,18 +166,18 @@ img {
         top: -80px; // 画面上から始まる
         width: 40px;
         height: 40px;
-        background-image: url(../img/haanbira-1.png); // ← 差し替え
+        background-image: url(img/haanbira-1.png); // ← 差し替え
         background-size: contain;
         background-repeat: no-repeat;
         animation: fall linear infinite;
 
         &:nth-child(2) {
-            background-image: url(../img/haanbira-3.png);
+            background-image: url(img/haanbira-3.png);
         }
 
         &:nth-child(3),
         &:nth-child(5) {
-            background-image: url(../img/haanbira-2.png);
+            background-image: url(img/haanbira-2.png);
         }
     }
 }
