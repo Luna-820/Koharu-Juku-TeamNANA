@@ -916,7 +916,7 @@ img {
 
 #service .fv {
   position: relative;
-  background: url(../img/fv-img.png);
+  background: url(img/fv-img.png);
   background-position: center;
   background-size: cover;
   padding: 100px 15px;
@@ -1151,7 +1151,7 @@ img {
   width: 20px;
   height: 20px;
   border-radius: 0;
-  background: url("../img/card-point.png") center/contain no-repeat;
+  background: url("img/card-point.png") center/contain no-repeat;
   background-color: transparent;
 }
 #service #movie {
@@ -1220,7 +1220,7 @@ img {
   width: 20px;
   height: 20px;
   border-radius: 0;
-  background: url("../img/card-point.png") center/contain no-repeat;
+  background: url("img/card-point.png") center/contain no-repeat;
   background-color: transparent;
 }
 #service #esports .white-bg {
@@ -1235,13 +1235,14 @@ img {
   text-align: left;
   background-color: #FFFFFF;
   padding-block: 64px;
+  position: relative;
 }
 #service .contact .wrapper .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  background: url(../img/contact-bg.png);
+  background: url(img/contact-bg.png);
   background-position: center;
   background-size: cover;
   border-radius: 20px;
@@ -1259,6 +1260,13 @@ img {
 #service .contact .wrapper .flex .right .arrow {
   width: 50px;
   height: 50px;
+}
+#service .contact .before-footer-deco {
+  width: 150px;
+  position: absolute;
+  right: 0;
+  bottom: -20%;
+  overflow-x: hidden;
 }
 
 #sponsor .fv {
@@ -1433,7 +1441,7 @@ img {
 
 #blog .fv {
   position: relative;
-  background: url(../img/fv-img.png);
+  background: url(img/fv-img.png);
   background-position: center;
   background-size: cover;
   padding: 100px 15px;
@@ -1478,7 +1486,7 @@ img {
 }
 #blog .blog {
   position: relative;
-  background: #FDF4F1;
+  background: #fdf4f1;
   padding-block: 60px;
 }
 #blog .blog__category-nav {
@@ -1500,6 +1508,7 @@ img {
   color: #2B2B2B;
   border: 0.5px solid #2B2B2B;
   border-radius: 11px;
+  transition: all 0.3s;
   padding: 8px 16px;
 }
 @media (max-width: 370px) {
@@ -1511,6 +1520,11 @@ img {
   color: #FFFFFF;
   border: 0.5px solid #CE7E8B;
   background: #CE7E8B;
+}
+#blog .blog__category-nav .list .item:hover {
+  background-color: #CE7E8B;
+  color: #FFFFFF;
+  border: 0.5px solid #CE7E8B;
 }
 #blog .blog__posts .post {
   background: #FFFFFF;
@@ -1557,6 +1571,40 @@ img {
 #blog .blog__posts .post__link .flex__right .arrow {
   width: 100%;
 }
+#blog .blog .pagination {
+  margin: 60px auto;
+  text-align: center;
+}
+#blog .blog .pagination .nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+#blog .blog .pagination .page-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 26px;
+  border-radius: 8px;
+  border: 1px solid #2B2B2B;
+  background: #FFFFFF;
+  color: #2B2B2B;
+  text-decoration: none;
+  font-family: "Hina Mincho", serif;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+#blog .blog .pagination .page-numbers.current {
+  background: #CE7E8B;
+  border-color: #CE7E8B;
+  color: #FFFFFF;
+}
+#blog .blog .pagination .page-numbers:hover:not(.current) {
+  background: rgba(206, 126, 139, 0.1);
+  border-color: #CE7E8B;
+  color: #CE7E8B;
+}
 #blog .blog__bg {
   width: 100%;
   position: absolute;
@@ -1573,13 +1621,14 @@ img {
   text-align: left;
   background-color: #FFFFFF;
   padding-block: 64px;
+  position: relative;
 }
 #blog .contact .wrapper .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  background: url(../img/contact-bg.png);
+  background: url(img/contact-bg.png);
   background-position: center;
   background-size: cover;
   border-radius: 20px;
@@ -1598,16 +1647,17 @@ img {
   width: 50px;
   height: 50px;
 }
-@media (max-width: 370px) {
-  #blog .contact .wrapper .flex .right .arrow {
-    width: 30px;
-    height: 30px;
-  }
+#blog .contact .before-footer-deco {
+  width: 150px;
+  position: absolute;
+  right: 0;
+  bottom: -20%;
+  overflow-x: hidden;
 }
 
 #blog-detail .fv {
   position: relative;
-  background: url(../img/fv-img.png);
+  background: url(img/fv-img.png);
   background-position: center;
   background-size: cover;
   padding: 100px 15px;
@@ -1674,6 +1724,7 @@ img {
   color: #2B2B2B;
   border: 0.5px solid #2B2B2B;
   border-radius: 11px;
+  transition: all 0.3s;
   padding: 8px 16px;
 }
 @media (max-width: 370px) {
@@ -1685,6 +1736,11 @@ img {
   color: #FFFFFF;
   border: 0.5px solid #CE7E8B;
   background: #CE7E8B;
+}
+#blog-detail .blog__category-nav .list .item:hover {
+  background-color: #CE7E8B;
+  color: #FFFFFF;
+  border: 0.5px solid #CE7E8B;
 }
 #blog-detail .blog .post {
   border-radius: 10px;
@@ -1718,7 +1774,13 @@ img {
 #blog-detail .blog .post__back {
   border: 0.5px solid #2B2B2B;
   border-radius: 10px;
+  transition: all 0.3s;
   padding: 10px 20px;
+}
+#blog-detail .blog .post__back:hover {
+  background-color: #CE7E8B;
+  color: #FFFFFF;
+  border: 0.5px solid #CE7E8B;
 }
 #blog-detail .blog__bg {
   width: 100%;
@@ -1736,13 +1798,14 @@ img {
   text-align: left;
   background-color: #FFFFFF;
   padding-block: 64px;
+  position: relative;
 }
 #blog-detail .contact .wrapper .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  background: url(../img/contact-bg.png);
+  background: url(img/contact-bg.png);
   background-position: center;
   background-size: cover;
   border-radius: 20px;
@@ -1760,4 +1823,11 @@ img {
 #blog-detail .contact .wrapper .flex .right .arrow {
   width: 50px;
   height: 50px;
+}
+#blog-detail .contact .before-footer-deco {
+  width: 150px;
+  position: absolute;
+  right: 0;
+  bottom: -20%;
+  overflow-x: hidden;
 }/*# sourceMappingURL=main.css.map */

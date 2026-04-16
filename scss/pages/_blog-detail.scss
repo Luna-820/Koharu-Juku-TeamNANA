@@ -4,7 +4,7 @@
 #blog-detail {
   .fv {
     position: relative;
-    background: url(../img/fv-img.png);
+    background: url(img/fv-img.png);
     background-position: center;
     background-size: cover;
     padding: 100px 15px;
@@ -80,6 +80,7 @@
           color: $color-black;
           border: 0.5px solid $color-black;
           border-radius: 11px;
+          transition: all 0.3s;
           padding: 8px 16px;
 
           @include mx.sp-370 {
@@ -90,6 +91,12 @@
             color: $color-white;
             border: 0.5px solid $color-deep-pink;
             background: $color-deep-pink;
+          }
+
+          &:hover {
+            background-color: $color-deep-pink;
+            color: $color-white;
+            border: .5px solid $color-deep-pink;
           }
         }
       }
@@ -133,7 +140,15 @@
       &__back {
         border: .5px solid $color-black;
         border-radius: 10px;
+        transition: all 0.3s;
         padding: 10px 20px;
+
+          &:hover {
+            background-color: $color-deep-pink;
+            color: $color-white;
+            border: .5px solid $color-deep-pink;
+          }
+
       }
     }
 
@@ -149,44 +164,54 @@
     }
   }
 
-  .contact {
-    color: $color-white;
-    text-align: left;
-    background-color: $color-white;
-    padding-block: 64px;
+    .contact {
+        color: $color-white;
+        text-align: left;
+        background-color: $color-white;
+        padding-block: 64px;
+        position: relative;
 
-    .wrapper {
-      .flex {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        background: url(../img/contact-bg.png);
-        background-position: center;
-        background-size: cover;
-        border-radius: 20px;
-        padding: 30px;
+        .wrapper {
+            .flex {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                background: url(img/contact-bg.png);
+                background-position: center;
+                background-size: cover;
+                border-radius: 20px;
+                padding: 30px;
 
-        .left {
-          .contact-title {
-            font-size: 2.8rem;
-            font-weight: $fw-base;
-            margin-bottom: 8px;
-          }
+                .left {
+                    .contact-title {
+                        font-size: 2.8rem;
+                        font-weight: $fw-base;
+                        margin-bottom: 8px;
+                    }
 
-          .contact-text {
-            font-size: $fs-small;
-            font-weight: $fw-base;
-          }
+                    .contact-text {
+                        font-size: $fs-small;
+                        font-weight: $fw-base;
+                    }
+                }
+
+                .right {
+                    .arrow {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
         }
 
-        .right {
-          .arrow {
-            width: 50px;
-            height: 50px;
-          }
+        .before-footer-deco {
+            width: 150px;
+            position: absolute;
+            right: 0;
+            bottom: -20%;
+            overflow-x: hidden;
         }
-      }
     }
-  }
+
 }
