@@ -8,6 +8,8 @@ $(function () {
   window.addEventListener(
     "wheel",
     (e) => {
+      // ★ハンバーガーメニューが開いてる時はスクロール禁止★
+      if (document.querySelector('header').classList.contains('active')) return;
       velocity += e.deltaY * 0.4;
       if (rafId) return;
       const step = () => {
@@ -47,19 +49,19 @@ $(function () {
       e.preventDefault();
       const target = document.querySelector(anchor.getAttribute("href"));
       if (!target) return;
-      
+
       const targetTop = getOffsetTop(target);
       inner.scrollTo({ top: targetTop, behavior: "smooth" });
     });
   });
-  
+
   const setupCardSection = (sectionSelector) => {
     const section = document.querySelector(sectionSelector);
     if (!section) return;
-    
+
     const cards = section.querySelectorAll(".card");
     if (cards.length <= 1) return;
-    
+
     // --------------------------------
     // ドットナビ生成
     // --------------------------------
@@ -76,7 +78,7 @@ $(function () {
 
     const handleScroll = () => {
       const scrollY = inner.scrollTop;
-      const sectionTop = getOffsetTop(section); 
+      const sectionTop = getOffsetTop(section);
       const localScroll = scrollY - sectionTop;
 
       if (localScroll < 0) {
@@ -103,34 +105,71 @@ $(function () {
   setupCardSection(".card-section-esports");
 
 
-    // --------------------------------
+  // --------------------------------
   // スポンサーページソート機能
   // --------------------------------
 
-      // 1. 要素を取得
-      const $filterBtn = $('.filter-list li'); // ボタン
-      const $sponsorBox = $('.sponsor-box');  // 切り替える箱
-  
-      $filterBtn.on('click', function() {
-          // 2. クリックされたボタンの data-filter の値を取得（all, individual など）
-          const filter = $(this).attr('data-filter');
-  
-          // 3. ボタンの見た目（activeクラス）を切り替え
-          $filterBtn.removeClass('active');
-          $(this).addClass('active');
-  
-          // 4. アニメーション処理
-          if (filter === 'all') {
-              // 「全て」なら全部出す
-              $sponsorBox.stop().fadeOut(200, function() {
-                  $sponsorBox.fadeIn(300);
-              });
-          } else {
-              // 一旦全部消して、該当するクラスだけ出す
-              $sponsorBox.stop().fadeOut(200, function() {
-                  // ここで HTML の li に付けたクラス（.individual など）を探しています
-                  $('.' + filter).fadeIn(300);
-              });
-          }
+  // 1. 要素を取得
+  const $filterBtn = $('.filter-list li'); // ボタン
+  const $sponsorBox = $('.sponsor-box');  // 切り替える箱
+
+  $filterBtn.on('click', function () {
+    // 2. クリックされたボタンの data-filter の値を取得（all, individual など）
+    const filter = $(this).attr('data-filter');
+
+    // 3. ボタンの見た目（activeクラス）を切り替え
+    $filterBtn.removeClass('active');
+    $(this).addClass('active');
+
+    // 4. アニメーション処理
+    if (filter === 'all') {
+      // 「全て」なら全部出す
+      $sponsorBox.stop().fadeOut(200, function () {
+        $sponsorBox.fadeIn(300);
       });
+    } else {
+      // 一旦全部消して、該当するクラスだけ出す
+      $sponsorBox.stop().fadeOut(200, function () {
+        // ここで HTML の li に付けたクラス（.individual など）を探しています
+        $('.' + filter).fadeIn(300);
+      });
+    }
+  });
+
+  // --------------------------------
+  // 1. ハンバーガーメニュー開閉
+  // --------------------------------
+  $('.hamburger_toggle').on('click', function (e) {
+    e.stopPropagation();
+    $('header').toggleClass('active');
+
+    // メニューが開いたら inner を隠し、背景の固定を確実にする
+    if ($('header').hasClass('active')) {
+      $('.body__inner').css('overflow', 'hidden');
+    } else {
+      $('.body__inner').css('overflow-y', 'scroll');
+    }
+  });
+
+  // 背景クリックで閉じる
+  $('.hamburger-menu').on('click', function () {
+    $('header').removeClass('active');
+    $('.body__inner').css('overflow-y', 'scroll');
+  });
+
+  $('.hamburger-menu__inner').on('click', function (e) {
+    e.stopPropagation();
+  });
+
+  // ---------------------------------------------------------
+  // メニュー開閉時だけスクロールを強制ブロック
+  // ---------------------------------------------------------
+  $(window).on('wheel touchmove', function (e) {
+    // もし header が active クラス（メニュー開状態）を持っていたら
+    if ($('header').hasClass('active')) {
+      // 全てのスクロール動作を強制的にキャンセルする
+      e.preventDefault();
+      return false;
+    }
+  }, { passive: false });
 });
