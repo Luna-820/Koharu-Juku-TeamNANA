@@ -296,79 +296,203 @@ img {
   }
 }
 .side-menu {
+  display: block;
+  position: fixed;
+  top: 45%;
+  transform: translateY(-50%);
+  left: calc(50% + 270px);
+  z-index: 100;
+}
+.side-menu__inner {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 60px 30px;
+  border-radius: 120px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.side-menu__list {
+  list-style: none;
+  padding: 0;
+}
+.side-menu__list li {
+  margin-bottom: 20px;
+}
+.side-menu__list li a {
+  position: relative;
+  display: block;
+  padding-left: 45px;
+  text-decoration: none;
+  color: #2B2B2B;
+  font-family: "Vujahday Script", "Hina Mincho", serif;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+.side-menu__list li a .sakura-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(-10px);
+  width: 50px;
+  height: auto;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+.side-menu__list li a:hover {
+  color: #CE7E8B;
+}
+.side-menu__list li a:hover .sakura-icon {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+.side-menu__list li.is-active a {
+  color: #CE7E8B;
+}
+.side-menu__list li.is-active a .sakura-icon {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+.side-menu__sub {
+  margin-top: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 30px;
+}
+.side-menu__sub .side-menu__list a {
+  font-size: 1em;
+  color: #2B2B2B;
+  font-family: "Old Standard TT", sans-serif;
+}
+.side-menu__sub .side-menu__list a:hover {
+  color: #CE7E8B;
+}
+@media (max-width: 1000px) {
+  .side-menu {
+    display: none;
+  }
+}
+
+header {
   display: none;
 }
-@media (min-width: 1024px) {
-  .side-menu {
-    display: block;
-    position: fixed;
-    top: 45%;
-    transform: translateY(-50%);
-    left: calc(50% + 300px);
-    z-index: 100;
-  }
-  .side-menu__inner {
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    padding: 60px 40px;
-    border-radius: 120px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  }
-  .side-menu__list {
-    list-style: none;
-    padding: 0;
-  }
-  .side-menu__list li {
-    margin-bottom: 20px;
-  }
-  .side-menu__list li a {
-    position: relative;
-    display: block;
-    padding-left: 45px;
-    text-decoration: none;
-    color: #2B2B2B;
-    font-family: "Vujahday Script", "Hina Mincho", serif;
-    font-size: 2rem;
-    transition: color 0.3s ease;
-  }
-  .side-menu__list li a .sakura-icon {
+@media (max-width: 1000px) {
+  header {
     position: absolute;
+    top: 0;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%) translateX(-10px);
-    width: 50px;
-    height: auto;
-    opacity: 0;
-    transition: all 0.3s ease;
-    pointer-events: none;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent;
   }
-  .side-menu__list li a:hover {
-    color: #CE7E8B;
-  }
-  .side-menu__list li a:hover .sakura-icon {
-    opacity: 1;
-    transform: translateY(-50%) translateX(0);
-  }
-  .side-menu__list li.is-active a {
-    color: #CE7E8B;
-  }
-  .side-menu__list li.is-active a .sakura-icon {
-    opacity: 1;
-    transform: translateY(-50%) translateX(0);
-  }
-  .side-menu__sub {
-    margin-top: 40px;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
-    padding-top: 30px;
-  }
-  .side-menu__sub .side-menu__list a {
-    font-size: 2rem;
-    color: #2B2B2B;
-    font-family: "Old Standard TT", sans-serif;
-  }
-  .side-menu__sub .side-menu__list a:hover {
-    color: #CE7E8B;
-  }
+}
+header .hamburger_toggle {
+  width: 35px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1100;
+}
+header .hamburger_toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #CE7E8B;
+  position: absolute;
+  left: 0;
+  transition: all 0.4s ease;
+}
+header .hamburger_toggle span:nth-child(1) {
+  top: 0;
+}
+header .hamburger_toggle span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+header .hamburger_toggle span:nth-child(3) {
+  bottom: 0;
+}
+header .hamburger_toggle span:hover span:nth-child(2) {
+  transform: translateY(-50%) translateX(10px);
+}
+header .hamburger-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+header .hamburger-menu__list {
+  list-style: none;
+  padding: 0;
+}
+header .hamburger-menu__list li {
+  margin-bottom: 25px;
+}
+header .hamburger-menu__list li a {
+  font-size: 2rem;
+  font-family: "Vujahday Script", "Hina Mincho", serif;
+  color: #2B2B2B;
+  position: relative;
+}
+header .hamburger-menu__list li a .sakura-icon {
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-10px);
+  width: 50px;
+  height: auto;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+header .hamburger-menu__list li.is-active a {
+  color: #CE7E8B;
+}
+header .hamburger-menu__list li.is-active a .sakura-icon {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+header .hamburger-menu__sub {
+  margin-top: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 30px;
+}
+header .hamburger-menu__sub a {
+  font-size: 1.8rem;
+  color: #2B2B2B;
+  font-family: "Old Standard TT", sans-serif;
+  padding-bottom: 16px;
+}
+header .hamburger-menu__sub a:hover {
+  color: #CE7E8B;
+}
+header.active .hamburger_toggle span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+header.active .hamburger_toggle span:nth-child(2) {
+  opacity: 0;
+}
+header.active .hamburger_toggle span:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+header.active .hamburger-menu {
+  opacity: 1;
+  visibility: visible;
 }
 
 .footer__inner {

@@ -1,12 +1,19 @@
 $tb: 768px;
 $sp: 430px;
 $sp-370: 370px;
+$tb-1000: 1000px;
 
 // @mixin pc {
 //     @media (min-width: ($sp + 1px)) {
 //         @content;
 //     }
 // }
+
+@mixin tb-1000 {
+    @media (max-width: $tb-1000) {
+        @content;
+    }    
+}
 
 @mixin tb {
     @media (max-width: $tb) {
