@@ -49,7 +49,8 @@ function koharu_nav_class( $page ) {
         case 'about':
             return is_page( 'about' ) ? ' is-active' : '';
         case 'blog':
-            return ( is_home() || is_singular( 'post' ) || is_category() || is_tag() ) ? ' is-active' : '';
+            // return ( is_home() || is_singular( 'post' ) || is_category() || is_tag() ) ? ' is-active' : '';
+            return ( is_home() || is_page('blog') || is_singular( 'post' ) || is_category() || is_tag() ) ? ' is-active' : '';
         case 'sponsor':
             return is_page( 'sponsor' ) ? ' is-active' : '';
         case 'contact':
