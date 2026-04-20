@@ -1,3 +1,4 @@
+(function ($) {
 $(function () {
   // --------------------------------
   // .body外でもスクロール
@@ -173,3 +174,4 @@ $(function () {
     }
   }, { passive: false });
 });
+})(jQuery);

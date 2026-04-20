@@ -103,7 +103,8 @@ a:hover {
 img {
   width: 100%;
   vertical-align: bottom;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .body {
@@ -243,12 +244,11 @@ img {
   background-color: #B6D176;
   border-radius: 40px;
   padding-block: 10px;
-  border: 3px solid transparent;
+  border: 2px solid #B6D176;
 }
 .btn:hover {
   color: #B6D176;
   background-color: #FEF7EE;
-  border: 2px solid #B6D176;
 }
 .btn img {
   width: 50px;
