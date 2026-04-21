@@ -165,13 +165,23 @@ $(function () {
   // ---------------------------------------------------------
   // メニュー開閉時だけスクロールを強制ブロック
   // ---------------------------------------------------------
-  $(window).on('wheel touchmove', function (e) {
-    // もし header が active クラス（メニュー開状態）を持っていたら
-    if ($('header').hasClass('active')) {
-      // 全てのスクロール動作を強制的にキャンセルする
-      e.preventDefault();
-      return false;
-    }
-  }, { passive: false });
+  // $(window).on('wheel touchmove', function (e) {
+  //   // もし header が active クラス（メニュー開状態）を持っていたら
+  //   if ($('header').hasClass('active')) {
+  //     // 全てのスクロール動作を強制的にキャンセルする
+  //     e.preventDefault();
+  //     return false;
+  //   }
+  // }, { passive: false });
+
+  ['wheel', 'touchmove'].forEach(function(eventType) {
+    window.addEventListener(eventType, function(e) {
+      if ($('header').hasClass('active')) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+  });
+
+
 });
 })(jQuery);

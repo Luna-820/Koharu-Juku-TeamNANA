@@ -14,10 +14,27 @@
           <div class="wrapper">
             <nav class="blog__category-nav">
               <ul class="list">
-                <li class="item is-active"><a href="#">すべて</a></li>
-                <li class="item"><a href="#">桜</a></li>
-                <li class="item"><a href="#">映画</a></li>
-                <li class="item"><a href="#">eスポーツ</a></li>
+                <li class="item <?php echo !isset($_GET['cat']) ? 'is-active' : ''; ?>">
+                  <a href="<?php echo esc_url( get_permalink() ); ?>">
+                    すべて
+                  </a>
+                </li>
+
+                <?php
+                  $category_slugs = array( 'sakura', 'movie', 'esports' );
+                  $categories = array();
+                  foreach ( $category_slugs as $slug ) {
+                    $cat = get_category_by_slug( $slug );
+                    if ( $cat ) $categories[] = $cat;
+                  }
+
+                  foreach ( $categories as $cat ) :
+                    $is_active = isset($_GET['cat']) && $_GET['cat'] == $cat->term_id ? 'is-active' : '';
+                  ?>
+                <li class="item <?php echo $is_active; ?>">
+                  <a href="<?php echo esc_url( add_query_arg( 'cat', $cat->term_id, get_permalink() ) ); ?>"><?php echo esc_html( $cat->name ); ?></a>
+                </li>
+                <?php endforeach; ?>
               </ul>
             </nav>
 
@@ -28,9 +45,12 @@
               // 投稿タイプを post に指定
               $args = array(
                 'post_type'      => 'post',   // ← 通常の投稿
-                'posts_per_page' => 1,       // 全件表示
+                'posts_per_page' => 5,       // 全件表示
                 'paged'          => $paged, 
               );
+              if ( isset($_GET['cat']) && !empty($_GET['cat']) ) {
+                $args['cat'] = intval( $_GET['cat'] );
+              }
               $news_query = new WP_Query($args);
 
               if ($news_query->have_posts()) :
@@ -39,7 +59,6 @@
 
               <li class="post">
                 <article>
-                  <!-- todo -->
                   <a href="<?php the_permalink(); ?>" class="post__link">
                     <?php 
                     $image = get_field('blog_img');
@@ -53,8 +72,12 @@
                           <img src="<?php echo get_template_directory_uri(); ?>/img/blog-hanabira.png" alt="桜" class="sakura" />
                           <?php the_field('blog_title'); ?>
                         </h3>
-                        <p class="category"># 桜</p>
-                        <!-- <a href="#" class="category">桜</a> -->
+                        <?php
+                        $cats = get_the_category();
+                        if ( $cats ) :
+                        ?>
+                        <p class="category"># <?php echo esc_html( $cats[0]->name ); ?></p>
+                        <?php endif; ?>
                       </div>
 
                       <div class="flex__right">
@@ -74,14 +97,6 @@
 
             </ul>
 
-            <!-- <nav class="navigation pagination" aria-label="投稿">
-              <div class="nav-links">
-                <span aria-current="page" class="page-numbers current">1</span>
-                <a class="page-numbers" href="#">2</a>
-                <a class="page-numbers" href="#">3</a>
-              </div>
-            </nav> -->
-
             <?php
               global $wp_query;
               $temp_query = $wp_query;
@@ -89,8 +104,8 @@
 
               the_posts_pagination(array(
                   'mid_size'           => 2,
-                  'prev_text'          => '',
-                  'next_text'          => '',
+                  'prev_text'          => false,
+                  'next_text'          => false,
                   'screen_reader_text' => '',
                   'aria_label'         => '投稿',
               ));
