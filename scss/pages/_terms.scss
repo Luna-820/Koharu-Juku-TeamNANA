@@ -1,0 +1,87 @@
+@use '../mixin' as mx;
+@use '../base/base' as *;
+
+#terms {
+    .fv {
+        position: relative;
+        background: url(img/fv-img.png);
+        background-position: center;
+        background-size: cover;
+        padding: 100px 15px;
+        margin-bottom: 60px;
+
+        .section-title {
+            color: $color-white;
+
+            span {
+                color: $color-white;
+            }
+        }
+
+        .fv-bg {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .hanabira {
+            position: absolute;
+        }
+
+        .hanabira-1 {
+            width: 80px;
+            height: 80px;
+            left: 50px;
+            bottom: 10px;
+            z-index: 4;
+        }
+
+        .hanabira-2 {
+            width: 57px;
+            height: 57px;
+            left: 80px;
+            bottom: 5px;
+            transform: rotate(15deg);
+            z-index: 3;
+        }
+
+        .hanabira-3 {
+            width: 66px;
+            height: 66px;
+            right: 30px;
+            bottom: 30px;
+            transform: rotate(150deg);
+            z-index: 2;
+        }
+    }
+
+    .legal-content {
+        line-height: 1.8;
+        color: $color-black;
+        text-align: left; 
+        max-width: 320px; 
+        margin: 0 auto 80px;
+
+        h3 {
+            font-size: 1.8rem;
+            border-left: 4px solid $color-deep-pink;
+            padding-left: 15px;
+            margin: 40px 0 20px;
+            font-weight: bold;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            li {
+                list-style: disc;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
