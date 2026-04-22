@@ -1958,6 +1958,109 @@ header.active .hamburger-menu {
   overflow-x: hidden;
 }
 
+#contact .fv {
+  position: relative;
+  background: url(img/fv-img.png);
+  background-position: center;
+  background-size: cover;
+  padding: 100px 15px;
+}
+#contact .fv .section-title {
+  color: #FFFFFF;
+}
+#contact .fv .section-title span {
+  color: #FFFFFF;
+}
+#contact .fv .fv-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+#contact .fv .hanabira {
+  position: absolute;
+}
+#contact .fv .hanabira-1 {
+  width: 80px;
+  height: 80px;
+  left: 50px;
+  bottom: 10px;
+  z-index: 4;
+}
+#contact .fv .hanabira-2 {
+  width: 57px;
+  height: 57px;
+  left: 80px;
+  bottom: 5px;
+  transform: rotate(15deg);
+  z-index: 3;
+}
+#contact .fv .hanabira-3 {
+  width: 66px;
+  height: 66px;
+  right: 30px;
+  bottom: 30px;
+  transform: rotate(150deg);
+  z-index: 2;
+}
+#contact {
+  /* フォーム全体のスタイル */
+}
+#contact p {
+  margin-bottom: 20px;
+}
+#contact form {
+  background-color: #FEF7EE;
+  padding: 20px 15px 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  /* ラベルのスタイル */
+}
+#contact form label {
+  display: block;
+  margin-top: 10px;
+}
+#contact form {
+  /* 入力欄のスタイル */
+}
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  /* box-sizingが適用されるので、paddingやborder込みで100%に収まる */
+  padding: 5px;
+  border: 2px solid #f6f6f6;
+  border-radius: 5px;
+}
+#contact form {
+  /* テキストエリアの高さを調整 */
+}
+#contact form textarea {
+  resize: vertical;
+  height: 120px;
+}
+#contact form span {
+  color: #CE7E8B;
+}
+#contact form {
+  /* 送信ボタンのスタイル */
+}
+#contact form button {
+  background-color: #B6D176;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#contact form button:hover {
+  background-color: #B6D176;
+}
+
 #terms .fv {
   position: relative;
   background: url(img/fv-img.png);
