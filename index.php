@@ -102,8 +102,8 @@
 
     <section id="cta" class="wrapper">
         <div class="sponsor">
-            <p>多くの企業や団体が私たちの活動を支援しています</p>
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/top-logos.png" alt="">
+            <!-- <p>多くの企業や団体が私たちの活動を支援しています</p>
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/top-logos.png" alt=""> -->
         </div>
         <div class="cta-box">
             <p class="cta__title">あなたの街を変える</p>
