@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="sponsor">
+<main id="partners">
     <div class="fv">
         <h2 class="section-title"><span>SPONSORS</span>スポンサー・協賛企業</h2>
         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/fv-bg.png" alt="背景" class="fv-bg">
@@ -16,7 +16,7 @@
             <li data-filter="government">行政</li>
         </ul>
 
-        <ul class="sponsors wrapper">
+        <ul class="partners wrapper">
             <?php
             $args = array(
                 'post_type'      => 'sponsor',
@@ -28,33 +28,36 @@
 
             if ($sponsor_query->have_posts()) :
                 while ($sponsor_query->have_posts()) : $sponsor_query->the_post();
+                    // フィールドの取得
                     $name      = get_field('sponsor_name');
-                    $type_slug = get_field('sponsor_type');
+                    $type_slug = get_field('sponsor_type'); 
                     $logo      = get_field('sponsor_logo');
                     $url       = get_field('sponsor_url');
 
                     if (!$name) continue;
 
-                    $type_label = '';
-                    if ($type_slug === 'individual')  $type_label = '個人';
-                    elseif ($type_slug === 'corporate')   $type_label = '法人';
-                    elseif ($type_slug === 'government')  $type_label = '行政';
+                    // --- 修正ポイント：ラベル取得の自動化 ---
+                    // get_field_object を使うことで、ACF設定内の「値 : ラベル」のペアを丸ごと取得します
+                    $field = get_field_object('sponsor_type');
+                    $type_label = ($field && isset($field['choices'][$type_slug])) ? $field['choices'][$type_slug] : '未分類';
 
-                    // ロゴURLの取得（配列でも文字列でも対応）
+                    // ロゴURLの取得（配列・文字列・IDどれでも安全にURLを返すように修正）
                     $logo_url = '';
                     if (is_array($logo)) {
                         $logo_url = $logo['url'] ?? '';
+                    } elseif (is_numeric($logo)) {
+                        $logo_url = wp_get_attachment_url($logo);
                     } elseif (is_string($logo)) {
                         $logo_url = $logo;
                     }
             ?>
-                    <li class="sponsor-box <?php echo esc_attr($type_slug); ?>">
+                    <li class="partner-box <?php echo esc_attr($type_slug); ?>">
                         <a href="<?php echo $url ? esc_url($url) : '#'; ?>" <?php echo $url ? 'target="_blank" rel="noopener"' : ''; ?>>
                             <div class="logo">
                                 <?php if ($logo_url) : ?>
                                     <img src="<?php echo esc_url($logo_url); ?>" alt="<?php echo esc_attr($name); ?> ロゴ">
                                 <?php else : ?>
-                                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/sponsor-dummy-logo.png" alt="ダミーロゴ">
+                                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/partners-thankyou-logo.png" alt="Thankyou-logo">
                                 <?php endif; ?>
                             </div>
                             <div class="info">

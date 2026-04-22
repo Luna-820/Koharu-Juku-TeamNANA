@@ -247,7 +247,7 @@ img {
 }
 .btn:hover {
   color: #B6D176;
-  background-color: #FEF7EE;
+  background-color: #FFFFFF;
 }
 .btn img {
   width: 50px;
@@ -1397,7 +1397,7 @@ header.active .hamburger-menu {
   overflow-x: hidden;
 }
 
-#sponsor .fv {
+#partners .fv {
   position: relative;
   background: url(img/fv-img.png);
   background-position: center;
@@ -1405,29 +1405,29 @@ header.active .hamburger-menu {
   padding: 100px 15px;
   margin-bottom: 60px;
 }
-#sponsor .fv .section-title {
+#partners .fv .section-title {
   color: #FFFFFF;
 }
-#sponsor .fv .section-title span {
+#partners .fv .section-title span {
   color: #FFFFFF;
 }
-#sponsor .fv .fv-bg {
+#partners .fv .fv-bg {
   position: absolute;
   left: 0;
   bottom: 0;
   z-index: 1;
 }
-#sponsor .fv .hanabira {
+#partners .fv .hanabira {
   position: absolute;
 }
-#sponsor .fv .hanabira-1 {
+#partners .fv .hanabira-1 {
   width: 80px;
   height: 80px;
   left: 50px;
   bottom: 10px;
   z-index: 4;
 }
-#sponsor .fv .hanabira-2 {
+#partners .fv .hanabira-2 {
   width: 57px;
   height: 57px;
   left: 80px;
@@ -1435,7 +1435,7 @@ header.active .hamburger-menu {
   transform: rotate(15deg);
   z-index: 3;
 }
-#sponsor .fv .hanabira-3 {
+#partners .fv .hanabira-3 {
   width: 66px;
   height: 66px;
   right: 30px;
@@ -1443,26 +1443,26 @@ header.active .hamburger-menu {
   transform: rotate(150deg);
   z-index: 2;
 }
-#sponsor .filter-list {
+#partners .filter-list {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   padding-bottom: 34px;
 }
-#sponsor .filter-list li {
+#partners .filter-list li {
   border: 1px solid #2B2B2B;
   border-radius: 11px;
   padding: 4px 16px;
   transition: 0.3s;
   cursor: pointer;
 }
-#sponsor .filter-list li:hover, #sponsor .filter-list li.active {
+#partners .filter-list li:hover, #partners .filter-list li.active {
   background-color: #CE7E8B;
   border: 1px solid #CE7E8B;
   color: #FFFFFF;
 }
-#sponsor .sponsors {
+#partners .partners {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -1470,7 +1470,7 @@ header.active .hamburger-menu {
   flex-wrap: wrap;
   padding-bottom: 20px;
 }
-#sponsor .sponsors .sponsor-box {
+#partners .partners .partner-box {
   background-color: rgb(250, 232, 228);
   width: 47.5%;
   border-radius: 10px;
@@ -1479,7 +1479,7 @@ header.active .hamburger-menu {
   padding: 15px 20px;
   box-sizing: border-box;
 }
-#sponsor .sponsors .sponsor-box .logo {
+#partners .partners .partner-box .logo {
   background-color: #FFFFFF;
   border-radius: 10px;
   width: 100%;
@@ -1489,52 +1489,52 @@ header.active .hamburger-menu {
   align-items: center;
   justify-content: center;
 }
-#sponsor .sponsors .sponsor-box .info {
+#partners .partners .partner-box .info {
   text-align: left;
   margin-top: auto;
 }
-#sponsor .sponsors .sponsor-box .info .name {
+#partners .partners .partner-box .info .name {
   font-family: "Hina Mincho", serif;
   line-height: 1;
   font-size: 1.6rem;
 }
-#sponsor .sponsors .sponsor-box .info .tag {
+#partners .partners .partner-box .info .tag {
   font-size: 1.2rem;
   color: #666;
 }
-#sponsor .pagination {
+#partners .pagination {
   margin: 60px auto;
   text-align: center;
 }
-#sponsor .pagination .nav-links {
+#partners .pagination .nav-links {
   display: flex;
   justify-content: center;
   gap: 7px;
 }
-#sponsor .pagination .page-numbers {
+#partners .pagination .page-numbers {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 50px;
   height: 30px;
 }
-#sponsor .pagination .page-numbers.current {
+#partners .pagination .page-numbers.current {
   background: #CE7E8B;
   border-color: #CE7E8B;
   color: #FFFFFF;
 }
-#sponsor .pagination .page-numbers:hover:not(.current) {
+#partners .pagination .page-numbers:hover:not(.current) {
   background: rgba(206, 126, 139, 0.1);
   border-color: #CE7E8B;
   color: #CE7E8B;
 }
-#sponsor .contact {
+#partners .contact {
   color: #FFFFFF;
   text-align: left;
   background-color: #FFFFFF;
   padding-block: 64px;
 }
-#sponsor .contact .wrapper .flex {
+#partners .contact .wrapper .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1545,16 +1545,16 @@ header.active .hamburger-menu {
   border-radius: 20px;
   padding: 30px;
 }
-#sponsor .contact .wrapper .flex .left .contact-title {
+#partners .contact .wrapper .flex .left .contact-title {
   font-size: 2.8rem;
   font-weight: 400;
   margin-bottom: 8px;
 }
-#sponsor .contact .wrapper .flex .left .contact-text {
+#partners .contact .wrapper .flex .left .contact-text {
   font-size: 1.4rem;
   font-weight: 400;
 }
-#sponsor .contact .wrapper .flex .right .arrow {
+#partners .contact .wrapper .flex .right .arrow {
   width: 50px;
   height: 50px;
 }
