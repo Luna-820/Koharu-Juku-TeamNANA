@@ -111,9 +111,7 @@
 
     // 1. 要素を取得
     const $filterBtn = $('.filter-list li');
-    // $sponsorBox はクリックイベントの中で毎回取得し直す方が、
-    // WPのレンダリング遅延の影響を受けず確実です。
-
+    
     $filterBtn.on('click', function () {
       const filter = $(this).attr('data-filter');
 
