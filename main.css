@@ -103,8 +103,7 @@ a:hover {
 img {
   width: 100%;
   vertical-align: bottom;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .body {
@@ -1957,4 +1956,154 @@ header.active .hamburger-menu {
   right: 0;
   bottom: -20%;
   overflow-x: hidden;
+}
+
+#terms .fv {
+  position: relative;
+  background: url(img/fv-img.png);
+  background-position: center;
+  background-size: cover;
+  padding: 100px 15px;
+  margin-bottom: 60px;
+}
+#terms .fv .section-title {
+  color: #FFFFFF;
+}
+#terms .fv .section-title span {
+  color: #FFFFFF;
+}
+#terms .fv .fv-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+#terms .fv .hanabira {
+  position: absolute;
+}
+#terms .fv .hanabira-1 {
+  width: 80px;
+  height: 80px;
+  left: 50px;
+  bottom: 10px;
+  z-index: 4;
+}
+#terms .fv .hanabira-2 {
+  width: 57px;
+  height: 57px;
+  left: 80px;
+  bottom: 5px;
+  transform: rotate(15deg);
+  z-index: 3;
+}
+#terms .fv .hanabira-3 {
+  width: 66px;
+  height: 66px;
+  right: 30px;
+  bottom: 30px;
+  transform: rotate(150deg);
+  z-index: 2;
+}
+#terms .legal-content {
+  line-height: 1.8;
+  color: #2B2B2B;
+  text-align: left;
+  max-width: 320px;
+  margin: 0 auto 80px;
+}
+#terms .legal-content h3 {
+  font-size: 1.8rem;
+  border-left: 4px solid #CE7E8B;
+  padding-left: 15px;
+  margin: 40px 0 20px;
+  font-weight: bold;
+}
+#terms .legal-content p {
+  margin-bottom: 15px;
+}
+#terms .legal-content ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+#terms .legal-content ul li {
+  list-style: disc;
+  margin-bottom: 5px;
+}
+
+#policy .fv {
+  position: relative;
+  background: url(img/fv-img.png);
+  background-position: center;
+  background-size: cover;
+  padding: 100px 15px;
+  margin-bottom: 60px;
+}
+#policy .fv .section-title {
+  color: #FFFFFF;
+}
+#policy .fv .section-title span {
+  color: #FFFFFF;
+}
+#policy .fv .fv-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+#policy .fv .hanabira {
+  position: absolute;
+}
+#policy .fv .hanabira-1 {
+  width: 80px;
+  height: 80px;
+  left: 50px;
+  bottom: 10px;
+  z-index: 4;
+}
+#policy .fv .hanabira-2 {
+  width: 57px;
+  height: 57px;
+  left: 80px;
+  bottom: 5px;
+  transform: rotate(15deg);
+  z-index: 3;
+}
+#policy .fv .hanabira-3 {
+  width: 66px;
+  height: 66px;
+  right: 30px;
+  bottom: 30px;
+  transform: rotate(150deg);
+  z-index: 2;
+}
+#policy .legal-content {
+  line-height: 1.8;
+  color: #2B2B2B;
+  text-align: left;
+  max-width: 320px;
+  margin: 0 auto 80px;
+}
+#policy .legal-content h3 {
+  font-size: 1.8rem;
+  border-left: 4px solid #CE7E8B;
+  padding-left: 15px;
+  margin: 40px 0 20px;
+  font-weight: bold;
+  text-align: left;
+}
+#policy .legal-content h4 {
+  font-size: 1.6rem;
+  margin: 25px 0 10px;
+  font-weight: bold;
+  text-align: left;
+}
+#policy .legal-content p {
+  margin-bottom: 15px;
+}
+#policy .legal-content ul {
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+#policy .legal-content ul li {
+  list-style: disc;
 }/*# sourceMappingURL=main.css.map */

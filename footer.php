@@ -46,8 +46,8 @@
             <hr class="footer__line" />
             <p class="footer__copyright">&copy; <?php echo date( 'Y' ); ?>年 心晴塾</p>
             <ul class="footer__sub-links">
-              <li><a href="#">利用規約</a></li>
-              <li><a href="#">プライバシーポリシー</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/terms/' ) ); ?>">利用規約</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/policy/' ) ); ?>">プライバシーポリシー</a></li>
             </ul>
           </div>
         </div>
