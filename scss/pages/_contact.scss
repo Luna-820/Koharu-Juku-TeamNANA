@@ -1,2 +1,114 @@
-@use '../mixin' as mx;   
+@use '../mixin' as mx;
 @use '../base/base' as *;
+
+
+
+#contact {
+    .fv {
+        position: relative;
+        background: url(img/fv-img.png);
+        background-position: center;
+        background-size: cover;
+        padding: 100px 15px;
+
+        .section-title {
+            color: $color-white;
+
+            span {
+                color: $color-white;
+            }
+        }
+
+        .fv-bg {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .hanabira {
+            position: absolute;
+        }
+
+        .hanabira-1 {
+            width: 80px;
+            height: 80px;
+            left: 50px;
+            bottom: 10px;
+            z-index: 4;
+        }
+
+        .hanabira-2 {
+            width: 57px;
+            height: 57px;
+            left: 80px;
+            bottom: 5px;
+            transform: rotate(15deg);
+            z-index: 3;
+        }
+
+        .hanabira-3 {
+            width: 66px;
+            height: 66px;
+            right: 30px;
+            bottom: 30px;
+            transform: rotate(150deg);
+            z-index: 2;
+        }
+    }
+
+    /* フォーム全体のスタイル */
+    p{
+        margin-bottom: 20px;
+    }
+    form {
+        background-color: $color-cream;
+        padding: 20px 15px 50px;
+        margin-bottom: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+
+        /* ラベルのスタイル */
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* 入力欄のスタイル */
+        input,
+        textarea {
+            width: 100%;
+            /* box-sizingが適用されるので、paddingやborder込みで100%に収まる */
+            padding: 5px;
+            border: 2px solid $color-grey;
+            border-radius: 5px;
+        }
+
+        /* テキストエリアの高さを調整 */
+        textarea {
+            resize: vertical;
+            height: 120px;
+        }
+        span{
+            color: $color-deep-pink;
+        }
+
+        /* 送信ボタンのスタイル */
+        button {
+            background-color: $color-green;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-green;
+            }
+        }
+    }
+}
