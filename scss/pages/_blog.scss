@@ -80,22 +80,27 @@
           border: 0.5px solid $color-black;
           border-radius: 11px;
           transition: all 0.3s;
-          padding: 8px 16px;
-
+          
           @include mx.sp-370 {
             padding: 8px 10px;
           }
-
+          
           &.is-active {
             color: $color-white;
             border: 0.5px solid $color-deep-pink;
             background: $color-deep-pink;
           }
-
+          
           &:hover {
             background-color: $color-deep-pink;
             color: $color-white;
             border: .5px solid $color-deep-pink;
+          }
+          
+          a {
+            width: 100%;
+            height: 100%;
+            padding: 8px 16px;
           }
         }
       }
@@ -142,7 +147,7 @@
               .category {
                 text-align: left;
                 color: #909090;
-                font-size: 1rem;
+                font-size: 1.4rem;
               }
             }
 
@@ -195,13 +200,17 @@
           color: $color-deep-pink;
         }
       }
+
+      .next, .prev {
+        display: none;
+      }
     }
 
     &__bg {
       width: 100%;
       position: absolute;
       left: 0;
-      bottom: -43px;
+      bottom: -10px;
 
       @include mx.sp-370 {
         bottom: -35px;

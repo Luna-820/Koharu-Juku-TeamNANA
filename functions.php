@@ -59,3 +59,19 @@ function koharu_nav_class( $page ) {
             return '';
     }
 }
+
+// blogカテゴリー自動生成
+function koharu_insert_default_categories() {
+    $categories = array(
+        array( 'name' => '桜',       'slug' => 'sakura' ),
+        array( 'name' => '映画',     'slug' => 'movie' ),
+        array( 'name' => 'eスポーツ', 'slug' => 'esports' ),
+    );
+
+    foreach ( $categories as $cat ) {
+        if ( ! get_category_by_slug( $cat['slug'] ) ) {
+            wp_insert_term( $cat['name'], 'category', array( 'slug' => $cat['slug'] ) );
+        }
+    }
+}
+add_action( 'after_setup_theme', 'koharu_insert_default_categories' );

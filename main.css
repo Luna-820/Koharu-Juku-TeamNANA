@@ -1356,7 +1356,7 @@ header.active .hamburger-menu {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: -35px;
+  bottom: -10px;
   transform: rotate(180deg);
 }
 #service .contact {
@@ -1630,7 +1630,6 @@ header.active .hamburger-menu {
   border: 0.5px solid #2B2B2B;
   border-radius: 11px;
   transition: all 0.3s;
-  padding: 8px 16px;
 }
 @media (max-width: 370px) {
   #blog .blog__category-nav .list .item {
@@ -1646,6 +1645,11 @@ header.active .hamburger-menu {
   background-color: #CE7E8B;
   color: #FFFFFF;
   border: 0.5px solid #CE7E8B;
+}
+#blog .blog__category-nav .list .item a {
+  width: 100%;
+  height: 100%;
+  padding: 8px 16px;
 }
 #blog .blog__posts .post {
   background: #FFFFFF;
@@ -1684,7 +1688,7 @@ header.active .hamburger-menu {
 #blog .blog__posts .post__link .flex__left .category {
   text-align: left;
   color: #909090;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 #blog .blog__posts .post__link .flex__right {
   width: 29px;
@@ -1726,11 +1730,14 @@ header.active .hamburger-menu {
   border-color: #CE7E8B;
   color: #CE7E8B;
 }
+#blog .blog .pagination .next, #blog .blog .pagination .prev {
+  display: none;
+}
 #blog .blog__bg {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: -43px;
+  bottom: -10px;
 }
 @media (max-width: 370px) {
   #blog .blog__bg {
@@ -1824,7 +1831,8 @@ header.active .hamburger-menu {
 #blog-detail .blog {
   position: relative;
   background: linear-gradient(to bottom, #FFFFFF, rgba(250, 232, 228, 0.5));
-  padding-block: 60px;
+  padding-top: 60px;
+  padding-bottom: 120px;
 }
 #blog-detail .blog__category-nav {
   font-family: "Hina Mincho", serif;
@@ -1846,7 +1854,6 @@ header.active .hamburger-menu {
   border: 0.5px solid #2B2B2B;
   border-radius: 11px;
   transition: all 0.3s;
-  padding: 8px 16px;
 }
 @media (max-width: 370px) {
   #blog-detail .blog__category-nav .list .item {
@@ -1858,10 +1865,9 @@ header.active .hamburger-menu {
   border: 0.5px solid #CE7E8B;
   background: #CE7E8B;
 }
-#blog-detail .blog__category-nav .list .item:hover {
-  background-color: #CE7E8B;
-  color: #FFFFFF;
-  border: 0.5px solid #CE7E8B;
+#blog-detail .blog__category-nav .list .item span {
+  display: inline-block;
+  padding: 8px 16px;
 }
 #blog-detail .blog .post {
   border-radius: 10px;
@@ -1881,7 +1887,7 @@ header.active .hamburger-menu {
 #blog-detail .blog .post__header .category {
   text-align: left;
   color: #909090;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 #blog-detail .blog .post__img {
   border-radius: 10px;
@@ -1907,7 +1913,7 @@ header.active .hamburger-menu {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: -43px;
+  bottom: -10px;
 }
 @media (max-width: 370px) {
   #blog-detail .blog__bg {
