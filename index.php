@@ -170,7 +170,8 @@
 
         <div class="insta-container">
             <div class="dummy-imsta">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/top-insta-dummy.png" alt="">
+              <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+                <!-- <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/top-insta-dummy.png" alt=""> -->
             </div>
         </div>
     </section>
