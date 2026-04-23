@@ -103,7 +103,8 @@ a:hover {
 img {
   width: 100%;
   vertical-align: bottom;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .body {
@@ -785,6 +786,9 @@ header.active .hamburger-menu {
   border-right: 2px solid #ffb6c1;
   transform: rotate(45deg);
   margin-left: 10px;
+}
+#top #news .insta-container {
+  text-align: left;
 }
 #top .contact {
   color: #FFFFFF;

@@ -71,7 +71,8 @@
         <p class="no_post">投稿はありません</p>
       <?php endif; ?>
 
-      <a href="javascript:history.back()" class="post__back">一覧に戻る 〉</a>
+      <!-- <a href="javascript:history.back()" class="post__back">一覧に戻る 〉</a> -->
+      <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" class="post__back">一覧に戻る 〉</a>
 
     </div>
     <img src="<?php echo get_template_directory_uri(); ?>/img/blog-bg.png" alt="背景" class="blog__bg" />
