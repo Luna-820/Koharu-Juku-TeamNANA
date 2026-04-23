@@ -54,8 +54,8 @@ function koharu_nav_class($page)
         case 'blog':
             // return ( is_home() || is_singular( 'post' ) || is_category() || is_tag() ) ? ' is-active' : '';
             return ((is_home() && !is_front_page()) || is_archive() || is_singular('post')) ? 'is-active' : '';
-        case 'sponsor':
-            return is_page('sponsor') ? ' is-active' : '';
+        case 'partners':
+            return is_page('partners') ? ' is-active' : '';
         case 'contact':
             return is_page('contact') ? ' is-active' : '';
         default:

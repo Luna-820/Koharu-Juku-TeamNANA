@@ -37,8 +37,8 @@
               最新情報
             </a>
           </li>
-          <li class="<?php echo koharu_nav_class( 'sponsor' ); ?>">
-            <a href="<?php echo esc_url( home_url( '/sponsor/' ) ); ?>">
+          <li class="<?php echo koharu_nav_class( 'partners' ); ?>">
+            <a href="<?php echo esc_url( home_url( '/partners/' ) ); ?>">
               <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/header-deco.png" alt="" class="sakura-icon" />
               スポンサー
             </a>
@@ -122,8 +122,8 @@
                   <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/header-deco.png" alt="" class="sakura-icon" />最新情報
                 </a>
               </li>
-              <li class="<?php echo koharu_nav_class( 'sponsor' ); ?>">
-                <a href="<?php echo esc_url( home_url( '/sponsor/' ) ); ?>">
+              <li class="<?php echo koharu_nav_class( 'partners' ); ?>">
+                <a href="<?php echo esc_url( home_url( '/partners/' ) ); ?>">
                   <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/header-deco.png" alt="" class="sakura-icon" />スポンサー
                 </a>
               </li>

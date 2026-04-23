@@ -36,7 +36,7 @@
                 <li><a href="<?php echo esc_url( home_url( '/service/' ) ); ?>">事業内容</a></li>
                 <li><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">私たちについて</a></li>
                 <li><a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">最新情報</a></li>
-                <li><a href="<?php echo esc_url( home_url( '/sponsor/' ) ); ?>">スポンサー</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/partners/' ) ); ?>">スポンサー</a></li>
                 <li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">お問い合わせ</a></li>
               </ul>
             </nav>
