@@ -60,12 +60,12 @@
               Youtube
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="#" target="_blank">
               <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/header-deco.png" alt="" class="sakura-icon" />
               Instagram
             </a>
-          </li>
+          </li> -->
           <li>
             <a href="#" target="_blank">
               <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/header-deco.png" alt="" class="sakura-icon" />
@@ -136,7 +136,7 @@
             <div class="hamburger-menu__sub">
               <ul>
                 <li><a href="#" target="_blank">Youtube</a></li>
-                <li><a href="#" target="_blank">Instagram</a></li>
+                <!-- <li><a href="#" target="_blank">Instagram</a></li> -->
                 <li><a href="#" target="_blank">Tiktok</a></li>
               </ul>
             </div>

@@ -168,12 +168,13 @@
             </div>
         </div>
 
-        <div class="insta-container">
-            <div class="dummy-imsta">
-              <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+        <!-- <div class="insta-container"> -->
+            <!-- <div class="dummy-imsta"> -->
+              <!-- <?php echo do_shortcode('[instagram-feed feed=1]'); ?> -->
                 <!-- <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/top-insta-dummy.png" alt=""> -->
-            </div>
-        </div>
+            <!-- </div> -->
+        <!-- </div> -->
+        
     </section>
 
     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/top-divider5.png" alt="">
