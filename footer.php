@@ -12,11 +12,11 @@
                 </p>
               </div>
               <ul class="footer__sns">
-                <li>
+                <!-- <li>
                   <a href="#" target="_blank">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/footer-icon-ig.png" alt="Instagram" />
                   </a>
-                </li>
+                </li> -->
                 <li>
                   <a href="#" target="_blank">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/footer-icon-tiktok.png" alt="Tiktok" />

@@ -77,7 +77,8 @@
 
         /* 入力欄のスタイル */
         input,
-        textarea {
+        textarea,
+        select {
             width: 100%;
             /* box-sizingが適用されるので、paddingやborder込みで100%に収まる */
             padding: 5px;
