@@ -41,7 +41,7 @@
         <option value="__other_option__">その他</option>
       </select>
 
-      <label for="inquiry-other" id="inquiry-other-label" hidden>その他の内容<span>*</span></label>
+      <label for="inquiry-other" id="inquiry-other-label" hidden>その他の件名<span>*</span></label>
       <input type="text" id="inquiry-other" name="entry.115181633.other_option_response" hidden disabled>
 
       <label for="message">内容<span>*</span></label>
